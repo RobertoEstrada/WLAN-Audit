@@ -66,9 +66,9 @@
 	NSString *refURL = @"http://kz.ath.cx/wlan/codigo.txt";
 	NSString *sourceURL = @"https://github.com/RobertoEstrada/WLAN-Audit";
 	NSString *buildDate = [NSString stringWithUTF8String:__DATE__];
-	UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:@"Acerca de..."
-													 message:[NSString stringWithFormat:
-															  @"WLAN Key ©2011 Roberto Estrada\n\nEsta es una aplicacion pensada para auditar la seguridad de las claves de acceso de los puntos de acceso WLAN comprobando si pueden ser calculadas a traves de los datos publicos de la red.No me responsabilizo del uso que pueda derivarse de esta aplicacion\n\nBasado en el codigo de %@\n\nPuedes descargar el codigo desde:\n%@\n\nCompilado:%@",
+	UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"about_title",@"Acerca de...")
+													 message:[NSString stringWithFormat:NSLocalizedString(@"about_message",
+															  @"WLAN Audit ©2011 Roberto Estrada\n\nEsta es una aplicacion pensada para auditar la seguridad de las claves de acceso de los puntos de acceso WLAN comprobando si pueden ser calculadas a traves de los datos publicos de la red.No me responsabilizo del uso que pueda derivarse de esta aplicacion\n\nBasado en el codigo de %@\n\nPuedes descargar el codigo desde:\n%@\n\nCompilado:%@"),
 															  refURL,sourceURL,buildDate]
 													delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 	[msgBox show];
@@ -148,16 +148,16 @@
 	
 	// Result display
 	if (wlanKey != nil) {
-		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:@"AP Inseguro, clave encontrada"
-														 message:[NSString stringWithFormat:
-																  @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@",
+		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP Inseguro, clave encontrada")
+														 message:[NSString stringWithFormat:NSLocalizedString(@"unsafe_ap_message",
+																											  @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@"),
 																  wlanESSID,wlanKey]
-														delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Copiar",nil] autorelease];
+														delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:NSLocalizedString(@"copy_button",@"Copiar"),nil] autorelease];
 		[msgBox show];
 		
 	}else {
-		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:@"AP seguro, clave no encontrada"
-														 message:@"No se pudo encontrar la clave, el AP no tiene una clave que pueda ser calculada mediante sus datos publicos."
+		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"safe_ap_title",@"AP seguro, clave no encontrada")
+														 message:NSLocalizedString(@"safe_ap_message",@"No se pudo encontrar la clave, el AP no tiene una clave que pueda ser calculada mediante sus datos publicos.")
 														delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 		[msgBox show];
 	}

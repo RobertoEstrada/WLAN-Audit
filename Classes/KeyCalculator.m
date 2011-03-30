@@ -36,20 +36,26 @@
 }
 
 +(NSString*) calculateKeyWithESSID:(NSString*) essid BSSID:(NSString*) bssid {
+	// Regex to test the valid SSIDs for which we can calculate a default key.
+	NSPredicate *validSSIDs = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|JAZZTEL_....'"];
+	
 	NSString *trimmedBSSID = [bssid stringByReplacingOccurrencesOfString:@":" withString:@""];
 	NSString *formattedESSID = nil;
+	
 	// Removing name from the ESSID, we only want the numbers
-	if ([essid rangeOfString:@"JAZZTEL_"].location != NSNotFound) {		
+	if (([essid rangeOfString:@"JAZZTEL_"].location != NSNotFound) && [validSSIDs evaluateWithObject:essid]) {		
 		formattedESSID = [[essid stringByReplacingOccurrencesOfString:@"JAZZTEL_" withString:@""] uppercaseString];
-	}else if ([essid rangeOfString:@"WLAN_"].location != NSNotFound) {
+	}else if ([essid rangeOfString:@"WLAN_"].location != NSNotFound && [validSSIDs evaluateWithObject:essid]) {
 		formattedESSID = [[essid stringByReplacingOccurrencesOfString:@"WLAN_" withString:@""] uppercaseString];
 	}
 	if (formattedESSID == nil) {
 		return nil;
 	}
+	
 	// Key calculation
 	NSRange rng = {0,8};
 	NSString *stringToHash = [NSString stringWithFormat:@"%@%@%@%@",@"bcgbghgg",[trimmedBSSID substringWithRange:rng],formattedESSID,trimmedBSSID];
+	
 	// Hashing	
 	NSRange resultrange = {0,20};
 	NSString *result = [[[self md5:stringToHash] substringWithRange:resultrange]lowercaseString]; 
