@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* WLANKeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WLANKeyAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* WLANAuditAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -18,6 +18,9 @@
 		6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309812FF293500BE76ED /* MSNetworksManager.m */; };
 		629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309E12FF2BBF00BE76ED /* NetworkListController.m */; };
 		629130A112FF2BBF00BE76ED /* NetworkListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6291309F12FF2BBF00BE76ED /* NetworkListController.xib */; };
+		62989D92138DB78400EECD4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62989D91138DB78400EECD4F /* Settings.bundle */; };
+		62989D9C138DBEE200EECD4F /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62989D9A138DBEE200EECD4F /* Root.strings */; };
+		62989D9E138DBF2300EECD4F /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62989D9A138DBEE200EECD4F /* Root.strings */; };
 		62A0E5D4130306100094863D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D0130306100094863D /* Default.png */; };
 		62A0E5D5130306100094863D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D1130306100094863D /* Default@2x.png */; };
 		62A0E5D6130306100094863D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D2130306100094863D /* icon.png */; };
@@ -42,8 +45,8 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* WLANKeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANKeyAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* WLANKeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLANKeyAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = WLANAuditAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLANAuditAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* WLANAudit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLANAudit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,6 +62,9 @@
 		6291309D12FF2BBF00BE76ED /* NetworkListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkListController.h; sourceTree = "<group>"; };
 		6291309E12FF2BBF00BE76ED /* NetworkListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkListController.m; sourceTree = "<group>"; };
 		6291309F12FF2BBF00BE76ED /* NetworkListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NetworkListController.xib; path = Classes/NetworkListController.xib; sourceTree = "<group>"; };
+		62989D91138DB78400EECD4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		62989D9B138DBEE200EECD4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Settings.bundle/en.lproj/Root.strings; sourceTree = "<group>"; };
+		62989D9D138DBF2300EECD4F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Settings.bundle/es.lproj/Root.strings; sourceTree = "<group>"; };
 		62A0E5D0130306100094863D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		62A0E5D1130306100094863D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62A0E5D2130306100094863D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -122,8 +128,8 @@
 			children = (
 				6291309712FF293500BE76ED /* MSNetworksManager.h */,
 				6291309812FF293500BE76ED /* MSNetworksManager.m */,
-				1D3623240D0F684500981E51 /* WLANKeyAppDelegate.h */,
-				1D3623250D0F684500981E51 /* WLANKeyAppDelegate.m */,
+				1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */,
+				1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */,
 				6291309D12FF2BBF00BE76ED /* NetworkListController.h */,
 				6291309E12FF2BBF00BE76ED /* NetworkListController.m */,
 				628459011301D312007CC17E /* KeyCalculator.h */,
@@ -145,7 +151,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				621CEEFF1343B95300F04E32 /* Localizable.strings */,
 				62A0E60C130308D90094863D /* Libs */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -168,6 +173,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62989D91138DB78400EECD4F /* Settings.bundle */,
+				621CEEFF1343B95300F04E32 /* Localizable.strings */,
+				62989D9A138DBEE200EECD4F /* Root.strings */,
 				62A0E5D0130306100094863D /* Default.png */,
 				62A0E5D1130306100094863D /* Default@2x.png */,
 				62A0E5D2130306100094863D /* icon.png */,
@@ -322,6 +330,9 @@
 				62A0E5D6130306100094863D /* icon.png in Resources */,
 				62A0E5D7130306100094863D /* icon@2x.png in Resources */,
 				621CEF011343B95300F04E32 /* Localizable.strings in Resources */,
+				62989D92138DB78400EECD4F /* Settings.bundle in Resources */,
+				62989D9C138DBEE200EECD4F /* Root.strings in Resources */,
+				62989D9E138DBF2300EECD4F /* Root.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* WLANKeyAppDelegate.m in Sources */,
+				1D3623260D0F684500981E51 /* WLANAuditAppDelegate.m in Sources */,
 				6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */,
 				629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */,
 				628459031301D312007CC17E /* KeyCalculator.m in Sources */,
@@ -377,6 +388,15 @@
 				621CEF0F1343BA7700F04E32 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		62989D9A138DBEE200EECD4F /* Root.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62989D9B138DBEE200EECD4F /* en */,
+				62989D9D138DBF2300EECD4F /* es */,
+			);
+			name = Root.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -423,14 +443,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
 				PRODUCT_NAME = "WLAN Audit";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos4.3;
 			};
 			name = Debug;
 		};
@@ -438,7 +459,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -446,7 +468,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PRODUCT_NAME = "WLAN Audit";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos4.3;
 			};
 			name = Release;
 		};
