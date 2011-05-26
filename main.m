@@ -1,6 +1,6 @@
 //
 //  main.m
-//  WLANKey
+//  WLANAudit
 //
 //  Created by Roberto Estrada on 06/02/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

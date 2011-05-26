@@ -1,5 +1,5 @@
 /*
- * WLANKeyAppDelegate.m
+ * WLANAuditAppDelegate.m
  *
  * Copyright 2011 Roberto Estrada
  *
@@ -16,9 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "WLANKeyAppDelegate.h"
+#import "WLANAuditAppDelegate.h"
 
-@implementation WLANKeyAppDelegate
+@implementation WLANAuditAppDelegate
 
 @synthesize window, navController;
 

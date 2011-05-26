@@ -1,5 +1,5 @@
 /*
- * WLANKeyAppDelegate.h
+ * WLANAuditAppDelegate.h
  *
  * Copyright 2011 Roberto Estrada
  *
@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WLANKeyAppDelegate : NSObject <UIApplicationDelegate> {
+@interface WLANAuditAppDelegate : NSObject <UIApplicationDelegate> {
 	IBOutlet UIWindow *window;
 	IBOutlet UINavigationController *navController;
 }
