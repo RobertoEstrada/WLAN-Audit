@@ -59,6 +59,7 @@
 
 - (void)scanForNetworks {
 	MSNetworksManager *wlanManager = [MSNetworksManager sharedNetworksManager];
+    [wlanManager removeAllNetworks];
 	[wlanManager scan];
 }
 
