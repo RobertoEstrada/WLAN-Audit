@@ -17,10 +17,10 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "AdMobDelegateProtocol.h"
+#import "GADBannerViewDelegate.h"
 
 
-@interface AdDelegate : NSObject <AdMobDelegate> {
+@interface AdDelegate : NSObject <GADBannerViewDelegate> {
 	UITableViewController *viewController;
 }
 -(id)initWithViewController:(UITableViewController*)controller;

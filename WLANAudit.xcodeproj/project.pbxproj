@@ -14,6 +14,8 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		621CEF011343B95300F04E32 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 621CEEFF1343B95300F04E32 /* Localizable.strings */; };
+		623A5676138E691000D21FFB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5673138E691000D21FFB /* libGoogleAdMobAds.a */; };
+		623A5679138E708100D21FFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5678138E708100D21FFB /* SystemConfiguration.framework */; };
 		628459031301D312007CC17E /* KeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 628459021301D312007CC17E /* KeyCalculator.m */; };
 		6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309812FF293500BE76ED /* MSNetworksManager.m */; };
 		629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309E12FF2BBF00BE76ED /* NetworkListController.m */; };
@@ -25,27 +27,15 @@
 		62A0E5D5130306100094863D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D1130306100094863D /* Default@2x.png */; };
 		62A0E5D6130306100094863D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D2130306100094863D /* icon.png */; };
 		62A0E5D7130306100094863D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D3130306100094863D /* icon@2x.png */; };
-		62A0E624130309D40094863D /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E60F130309D40094863D /* CDataScanner.m */; };
-		62A0E625130309D40094863D /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E612130309D40094863D /* CDataScanner_Extensions.m */; };
-		62A0E626130309D40094863D /* NSCharacterSet_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E614130309D40094863D /* NSCharacterSet_Extensions.m */; };
-		62A0E627130309D40094863D /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E616130309D40094863D /* NSDictionary_JSONExtensions.m */; };
-		62A0E628130309D40094863D /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E618130309D40094863D /* NSScanner_Extensions.m */; };
-		62A0E629130309D40094863D /* CJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E61B130309D40094863D /* CJSONDataSerializer.m */; };
-		62A0E62A130309D40094863D /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E61D130309D40094863D /* CJSONDeserializer.m */; };
-		62A0E62B130309D40094863D /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E61F130309D40094863D /* CJSONScanner.m */; };
-		62A0E62C130309D40094863D /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E621130309D40094863D /* CJSONSerializer.m */; };
-		62A0E62D130309D40094863D /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E623130309D40094863D /* CSerializedJSONData.m */; };
 		62A0E63D13030B1D0094863D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E63C13030B1D0094863D /* AudioToolbox.framework */; };
 		62A0E64113030B390094863D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64013030B390094863D /* MediaPlayer.framework */; };
 		62A0E64513030B660094863D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64413030B660094863D /* MessageUI.framework */; };
-		62A0E64913030B700094863D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64813030B700094863D /* QuartzCore.framework */; };
-		62A0E65D13030F680094863D /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E603130308D40094863D /* libAdMob.a */; };
 		62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E67A13031A1D0094863D /* AdDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = WLANAuditAppDelegate.h; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANAuditAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLANAuditAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* WLANAudit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLANAudit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -55,6 +45,17 @@
 		32CA4F630368D1EE00C91783 /* WLANAudit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANAudit_Prefix.pch; sourceTree = "<group>"; };
 		621CEF001343B95300F04E32 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		621CEF0F1343BA7700F04E32 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		623A566B138E691000D21FFB /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		623A566C138E691000D21FFB /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		623A566D138E691000D21FFB /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		623A566E138E691000D21FFB /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		623A566F138E691000D21FFB /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		623A5670138E691000D21FFB /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		623A5671138E691000D21FFB /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		623A5672138E691000D21FFB /* Key.h.public */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Key.h.public; sourceTree = "<group>"; };
+		623A5673138E691000D21FFB /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		623A5674138E691000D21FFB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		623A5678138E708100D21FFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		628459011301D312007CC17E /* KeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCalculator.h; sourceTree = "<group>"; };
 		628459021301D312007CC17E /* KeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCalculator.m; sourceTree = "<group>"; };
 		6291309712FF293500BE76ED /* MSNetworksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNetworksManager.h; sourceTree = "<group>"; };
@@ -69,32 +70,6 @@
 		62A0E5D1130306100094863D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62A0E5D2130306100094863D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		62A0E5D3130306100094863D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		62A0E5FC130308D40094863D /* AdMobDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDelegateProtocol.h; sourceTree = "<group>"; };
-		62A0E5FD130308D40094863D /* AdMobInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobInterstitialAd.h; sourceTree = "<group>"; };
-		62A0E5FE130308D40094863D /* AdMobInterstitialDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobInterstitialDelegateProtocol.h; sourceTree = "<group>"; };
-		62A0E5FF130308D40094863D /* AdMobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobView.h; sourceTree = "<group>"; };
-		62A0E602130308D40094863D /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
-		62A0E603130308D40094863D /* libAdMob.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMob.a; sourceTree = "<group>"; };
-		62A0E60E130309D40094863D /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		62A0E60F130309D40094863D /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		62A0E611130309D40094863D /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		62A0E612130309D40094863D /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		62A0E613130309D40094863D /* NSCharacterSet_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_Extensions.h; sourceTree = "<group>"; };
-		62A0E614130309D40094863D /* NSCharacterSet_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_Extensions.m; sourceTree = "<group>"; };
-		62A0E615130309D40094863D /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		62A0E616130309D40094863D /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		62A0E617130309D40094863D /* NSScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScanner_Extensions.h; sourceTree = "<group>"; };
-		62A0E618130309D40094863D /* NSScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScanner_Extensions.m; sourceTree = "<group>"; };
-		62A0E61A130309D40094863D /* CJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDataSerializer.h; sourceTree = "<group>"; };
-		62A0E61B130309D40094863D /* CJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDataSerializer.m; sourceTree = "<group>"; };
-		62A0E61C130309D40094863D /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		62A0E61D130309D40094863D /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		62A0E61E130309D40094863D /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		62A0E61F130309D40094863D /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		62A0E620130309D40094863D /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		62A0E621130309D40094863D /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		62A0E622130309D40094863D /* CSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSerializedJSONData.h; sourceTree = "<group>"; };
-		62A0E623130309D40094863D /* CSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSerializedJSONData.m; sourceTree = "<group>"; };
 		62A0E63C13030B1D0094863D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		62A0E64013030B390094863D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		62A0E64413030B660094863D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -109,14 +84,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A0E65D13030F680094863D /* libAdMob.a in Frameworks */,
+				623A5679138E708100D21FFB /* SystemConfiguration.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				62A0E63D13030B1D0094863D /* AudioToolbox.framework in Frameworks */,
 				62A0E64113030B390094863D /* MediaPlayer.framework in Frameworks */,
 				62A0E64513030B660094863D /* MessageUI.framework in Frameworks */,
-				62A0E64913030B700094863D /* QuartzCore.framework in Frameworks */,
+				623A5676138E691000D21FFB /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +165,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				623A5678138E708100D21FFB /* SystemConfiguration.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -201,71 +177,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		62A0E5FB130308D40094863D /* AdMob */ = {
+		623A566A138E691000D21FFB /* GoogleAdMobAdsSDK */ = {
 			isa = PBXGroup;
 			children = (
-				62A0E5FC130308D40094863D /* AdMobDelegateProtocol.h */,
-				62A0E5FD130308D40094863D /* AdMobInterstitialAd.h */,
-				62A0E5FE130308D40094863D /* AdMobInterstitialDelegateProtocol.h */,
-				62A0E5FF130308D40094863D /* AdMobView.h */,
-				62A0E602130308D40094863D /* Key.h */,
-				62A0E603130308D40094863D /* libAdMob.a */,
+				623A566B138E691000D21FFB /* GADBannerView.h */,
+				623A566C138E691000D21FFB /* GADBannerViewDelegate.h */,
+				623A566D138E691000D21FFB /* GADInterstitial.h */,
+				623A566E138E691000D21FFB /* GADInterstitialDelegate.h */,
+				623A566F138E691000D21FFB /* GADRequest.h */,
+				623A5670138E691000D21FFB /* GADRequestError.h */,
+				623A5671138E691000D21FFB /* Key.h */,
+				623A5672138E691000D21FFB /* Key.h.public */,
+				623A5673138E691000D21FFB /* libGoogleAdMobAds.a */,
+				623A5674138E691000D21FFB /* README.txt */,
 			);
-			name = AdMob;
-			path = Libs/AdMob;
+			name = GoogleAdMobAdsSDK;
+			path = Libs/GoogleAdMobAdsSDK;
 			sourceTree = "<group>";
 		};
 		62A0E60C130308D90094863D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				62A0E60D130309D40094863D /* TouchJSON */,
-				62A0E5FB130308D40094863D /* AdMob */,
+				623A566A138E691000D21FFB /* GoogleAdMobAdsSDK */,
 			);
 			name = Libs;
-			sourceTree = "<group>";
-		};
-		62A0E60D130309D40094863D /* TouchJSON */ = {
-			isa = PBXGroup;
-			children = (
-				62A0E60E130309D40094863D /* CDataScanner.h */,
-				62A0E60F130309D40094863D /* CDataScanner.m */,
-				62A0E610130309D40094863D /* Extensions */,
-				62A0E619130309D40094863D /* JSON */,
-			);
-			name = TouchJSON;
-			path = Libs/TouchJSON;
-			sourceTree = "<group>";
-		};
-		62A0E610130309D40094863D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				62A0E611130309D40094863D /* CDataScanner_Extensions.h */,
-				62A0E612130309D40094863D /* CDataScanner_Extensions.m */,
-				62A0E613130309D40094863D /* NSCharacterSet_Extensions.h */,
-				62A0E614130309D40094863D /* NSCharacterSet_Extensions.m */,
-				62A0E615130309D40094863D /* NSDictionary_JSONExtensions.h */,
-				62A0E616130309D40094863D /* NSDictionary_JSONExtensions.m */,
-				62A0E617130309D40094863D /* NSScanner_Extensions.h */,
-				62A0E618130309D40094863D /* NSScanner_Extensions.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		62A0E619130309D40094863D /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				62A0E61A130309D40094863D /* CJSONDataSerializer.h */,
-				62A0E61B130309D40094863D /* CJSONDataSerializer.m */,
-				62A0E61C130309D40094863D /* CJSONDeserializer.h */,
-				62A0E61D130309D40094863D /* CJSONDeserializer.m */,
-				62A0E61E130309D40094863D /* CJSONScanner.h */,
-				62A0E61F130309D40094863D /* CJSONScanner.m */,
-				62A0E620130309D40094863D /* CJSONSerializer.h */,
-				62A0E621130309D40094863D /* CJSONSerializer.m */,
-				62A0E622130309D40094863D /* CSerializedJSONData.h */,
-				62A0E623130309D40094863D /* CSerializedJSONData.m */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,16 +299,6 @@
 				6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */,
 				629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */,
 				628459031301D312007CC17E /* KeyCalculator.m in Sources */,
-				62A0E624130309D40094863D /* CDataScanner.m in Sources */,
-				62A0E625130309D40094863D /* CDataScanner_Extensions.m in Sources */,
-				62A0E626130309D40094863D /* NSCharacterSet_Extensions.m in Sources */,
-				62A0E627130309D40094863D /* NSDictionary_JSONExtensions.m in Sources */,
-				62A0E628130309D40094863D /* NSScanner_Extensions.m in Sources */,
-				62A0E629130309D40094863D /* CJSONDataSerializer.m in Sources */,
-				62A0E62A130309D40094863D /* CJSONDeserializer.m in Sources */,
-				62A0E62B130309D40094863D /* CJSONScanner.m in Sources */,
-				62A0E62C130309D40094863D /* CJSONSerializer.m in Sources */,
-				62A0E62D130309D40094863D /* CSerializedJSONData.m in Sources */,
 				62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,8 +339,7 @@
 				INFOPLIST_FILE = "WLANAudit-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AdMob\"",
-					"\"$(SRCROOT)/Libs/AdMob\"",
+					"\"$(SRCROOT)/Libs/GoogleAdMobAdsSDK\"",
 				);
 				PRODUCT_NAME = WLANAudit;
 			};
@@ -431,8 +355,7 @@
 				INFOPLIST_FILE = "WLANAudit-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AdMob\"",
-					"\"$(SRCROOT)/Libs/AdMob\"",
+					"\"$(SRCROOT)/Libs/GoogleAdMobAdsSDK\"",
 				);
 				PRODUCT_NAME = WLANAudit;
 				VALIDATE_PRODUCT = YES;

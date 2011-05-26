@@ -11,13 +11,22 @@ dsa_priv.pem
 *.perspective
 *.perspectivev3
 *.pbxuser
+*.xcworkspacedata
+*.xcuserstate
+*.xcsettings
+*.xcbkptlist
+*.xcscheme
+xcschememanagement.plist
 
 # Generated files
 VersionX-revision.h
 
+# API Keys
+Key.h
+
 # build products
 build/
-*.[oa]
+*.[o]
 
 # Other source repository archive directories (protects when importing)
 .hg

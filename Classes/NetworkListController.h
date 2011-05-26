@@ -18,8 +18,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GADBannerView.h"
+#import "Key.h"
+
 @interface NetworkListController : UITableViewController <UITableViewDelegate, UIAlertViewDelegate> {
-	NSArray *wlanNetworks;
+	// Admob banner
+    GADBannerView *adView;
+    // Network data
+    NSArray *wlanNetworks;
 	NSArray *wlanBSSIDS;
 	NSString *wlanKey;
 }
