@@ -20,7 +20,6 @@
 		6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309812FF293500BE76ED /* MSNetworksManager.m */; };
 		629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309E12FF2BBF00BE76ED /* NetworkListController.m */; };
 		629130A112FF2BBF00BE76ED /* NetworkListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6291309F12FF2BBF00BE76ED /* NetworkListController.xib */; };
-		62989D9C138DBEE200EECD4F /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62989D9A138DBEE200EECD4F /* Root.strings */; };
 		629C7C79140853570046AB27 /* KeyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C7C77140853570046AB27 /* KeyListController.m */; };
 		629C7C7A140853570046AB27 /* KeyListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629C7C78140853570046AB27 /* KeyListController.xib */; };
 		62A0E5D4130306100094863D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D0130306100094863D /* Default.png */; };
@@ -273,7 +272,6 @@
 				62A0E5D6130306100094863D /* icon.png in Resources */,
 				62A0E5D7130306100094863D /* icon@2x.png in Resources */,
 				621CEF011343B95300F04E32 /* Localizable.strings in Resources */,
-				62989D9C138DBEE200EECD4F /* Root.strings in Resources */,
 				629C7C7A140853570046AB27 /* KeyListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,14 +321,6 @@
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
-		};
-		62989D9A138DBEE200EECD4F /* Root.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-			);
-			name = Root.strings;
-			path = /Users/roberto/Documents/Developer/WLANAudit;
-			sourceTree = "<absolute>";
 		};
 /* End PBXVariantGroup section */
 
