@@ -1,5 +1,5 @@
 /*
- * KeyCalculator.h
+ * KeyListController.h
  *
  * Copyright 2011 Roberto Estrada
  *
@@ -16,11 +16,23 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+#import "GADBannerView.h"
+#import "Key.h"
 
-@protocol KeyCalculator <NSObject>
+@interface KeyListController : UITableViewController<UIAlertViewDelegate> {
+    // Admob banner
+    GADBannerView *adView;
+    // Key list
+    NSArray *keyList;
+    // Network's essid
+    NSString *wlanESSID;
+    // Selected key
+    NSUInteger selectedKey;
+}
 
-+(NSArray*) calculateKeyWithESSID:(NSString*)essid BSSID:(NSString*)bssid;
+@property(nonatomic,retain) NSArray *keyList;
+@property(nonatomic,retain) NSString *wlanESSID;
+
 @end
-

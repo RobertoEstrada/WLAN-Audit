@@ -1,5 +1,5 @@
 /*
- * KeyCalculator.h
+ * WiFiXXXXXXKeyCalculator.h
  *
  * Copyright 2011 Roberto Estrada
  *
@@ -17,10 +17,10 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "KeyCalculator.h"
 
+@interface WiFiXXXXXXKeyCalculator : NSObject<KeyCalculator> {
+    
+}
 
-@protocol KeyCalculator <NSObject>
-
-+(NSArray*) calculateKeyWithESSID:(NSString*)essid BSSID:(NSString*)bssid;
 @end
-

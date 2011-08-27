@@ -17,14 +17,16 @@
  */
 
 #import "AdDelegate.h"
-#import "KeyCalculator.h"
+#import "WLANXXXXKeyCalculator.h"
+#import "WiFiXXXXXXKeyCalculator.h"
 #import "NetworkListController.h"
 #import "MSNetworksManager.h"
+#import "KeyListController.h"
 
 
 @implementation NetworkListController
 
-@synthesize wlanNetworks,wlanBSSIDS,wlanKey;
+@synthesize wlanNetworks,wlanBSSIDS,wlanKeys;
 
 #pragma mark -
 #pragma mark Ad Setup method
@@ -154,20 +156,39 @@
 	// Network data
 	NSString *wlanESSID  = [[wlanNetworks objectAtIndex:indexPath.row]objectForKey:@"SSID_STR"];
 	NSString *wlanBSSID = [[self formattedBSSIDfrom:[wlanBSSIDS objectAtIndex:indexPath.row]]uppercaseString];
+    
+    // Key calculation
+    NSPredicate *wlanxxxx = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|JAZZTEL_....'"];
+    NSPredicate *wifixxxxxx = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN......|YACOM......|WiFi......'"];
 	
 	// Result
-	self.wlanKey = [KeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
+    if ([wlanxxxx evaluateWithObject:wlanESSID]){
+        // WLAN_XXXX Code
+        self.wlanKeys = [WLANXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
+    }else if([wifixxxxxx evaluateWithObject:wlanESSID]) {
+        // WiFiXXXXXX Code
+        self.wlanKeys = [WiFiXXXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
+    }
+	
 	
 	// Result display
-	if (wlanKey != nil) {
+	if (wlanKeys != nil && [wlanKeys count] == 1) {
+        // There's only one key
 		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP Inseguro, clave encontrada")
 														 message:[NSString stringWithFormat:NSLocalizedString(@"unsafe_ap_message",
 																											  @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@"),
-																  wlanESSID,wlanKey]
+																  wlanESSID,wlanKeys]
 														delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:NSLocalizedString(@"copy_button",@"Copiar"),nil] autorelease];
 		[msgBox show];
 		
-	}else {
+	}else if (wlanKeys != nil && [wlanKeys count] > 1){
+        // Multiple keys need to be displayed
+        KeyListController *keyListController = [[KeyListController alloc] initWithNibName:@"KeyListController" bundle:nil];
+        keyListController.keyList = wlanKeys;
+        keyListController.wlanESSID = wlanESSID;
+        [self.navigationController pushViewController:keyListController animated:YES];
+        [keyListController release];
+    }else {
 		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"safe_ap_title",@"AP seguro, clave no encontrada")
 														 message:NSLocalizedString(@"safe_ap_message",@"No se pudo encontrar la clave, el AP no tiene una clave que pueda ser calculada mediante sus datos publicos.")
 														delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
@@ -179,7 +200,7 @@
 #pragma mark Alert view delegate
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
 	if (buttonIndex == 1) {
-		[UIPasteboard generalPasteboard].string = self.wlanKey;
+		[UIPasteboard generalPasteboard].string = (NSString*) [self.wlanKeys objectAtIndex:0];
 	}
 	
 }

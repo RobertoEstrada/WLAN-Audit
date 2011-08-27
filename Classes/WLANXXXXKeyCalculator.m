@@ -1,5 +1,5 @@
 /*
- * KeyCalculator.m
+ * WLANXXXXKeyCalculator.m
  *
  * Copyright 2011 Roberto Estrada
  *
@@ -17,10 +17,10 @@
  */
 
 #import <CommonCrypto/CommonDigest.h>
-#import "KeyCalculator.h"
+#import "WLANXXXXKeyCalculator.h"
 
 
-@implementation KeyCalculator
+@implementation WLANXXXXKeyCalculator
 
 + (NSString *) md5:(NSString *)str {
 	const char *cStr = [str UTF8String];
@@ -35,17 +35,9 @@
 			];	
 }
 
-+(NSString*) calculateKeyWithESSID:(NSString*) essid BSSID:(NSString*) bssid {
-    // Getting the preference value which allows to treat WLAN_XX networks as insecure, NO by default.
-    BOOL treatWlanXXAsInsecure = [[NSUserDefaults standardUserDefaults]boolForKey:@"wlanxx_preference"];
-    
-	// Regex to test the valid SSIDs for which we can calculate a default key.
-	NSPredicate *validSSIDs;
-    if (treatWlanXXAsInsecure == YES) {
-        validSSIDs = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|WLAN_..|JAZZTEL_....'"];
-    }else {
-        validSSIDs = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|JAZZTEL_....'"];
-    }        
++(NSArray*) calculateKeyWithESSID:(NSString*) essid BSSID:(NSString*) bssid {
+
+    NSPredicate *validSSIDs = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|JAZZTEL_....'"];       
 	
 	NSString *trimmedBSSID = [bssid stringByReplacingOccurrencesOfString:@":" withString:@""];
 	NSString *formattedESSID = nil;
@@ -66,10 +58,8 @@
 	
 	// Hashing	
 	NSRange resultrange = {0,20};
-	NSString *result = [[[self md5:stringToHash] substringWithRange:resultrange]lowercaseString]; 
+	NSArray *result = [NSArray arrayWithObject:[[[self md5:stringToHash] substringWithRange:resultrange]lowercaseString]]; 
 	return result;
-}
-
-	
+}	
 
 @end

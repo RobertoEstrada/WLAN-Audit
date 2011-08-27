@@ -16,13 +16,13 @@
 		621CEF011343B95300F04E32 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 621CEEFF1343B95300F04E32 /* Localizable.strings */; };
 		623A5676138E691000D21FFB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5673138E691000D21FFB /* libGoogleAdMobAds.a */; };
 		623A5679138E708100D21FFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5678138E708100D21FFB /* SystemConfiguration.framework */; };
-		628459031301D312007CC17E /* KeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 628459021301D312007CC17E /* KeyCalculator.m */; };
+		628459031301D312007CC17E /* WLANXXXXKeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 628459021301D312007CC17E /* WLANXXXXKeyCalculator.m */; };
 		6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309812FF293500BE76ED /* MSNetworksManager.m */; };
 		629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309E12FF2BBF00BE76ED /* NetworkListController.m */; };
 		629130A112FF2BBF00BE76ED /* NetworkListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6291309F12FF2BBF00BE76ED /* NetworkListController.xib */; };
-		62989D92138DB78400EECD4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62989D91138DB78400EECD4F /* Settings.bundle */; };
 		62989D9C138DBEE200EECD4F /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62989D9A138DBEE200EECD4F /* Root.strings */; };
-		62989D9E138DBF2300EECD4F /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62989D9A138DBEE200EECD4F /* Root.strings */; };
+		629C7C79140853570046AB27 /* KeyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C7C77140853570046AB27 /* KeyListController.m */; };
+		629C7C7A140853570046AB27 /* KeyListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629C7C78140853570046AB27 /* KeyListController.xib */; };
 		62A0E5D4130306100094863D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D0130306100094863D /* Default.png */; };
 		62A0E5D5130306100094863D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D1130306100094863D /* Default@2x.png */; };
 		62A0E5D6130306100094863D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D2130306100094863D /* icon.png */; };
@@ -31,6 +31,7 @@
 		62A0E64113030B390094863D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64013030B390094863D /* MediaPlayer.framework */; };
 		62A0E64513030B660094863D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64413030B660094863D /* MessageUI.framework */; };
 		62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E67A13031A1D0094863D /* AdDelegate.m */; };
+		62C182DE1407072D00052601 /* WiFiXXXXXXKeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C182DD1407072D00052601 /* WiFiXXXXXXKeyCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,16 +57,16 @@
 		623A5673138E691000D21FFB /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		623A5674138E691000D21FFB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		623A5678138E708100D21FFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		628459011301D312007CC17E /* KeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCalculator.h; sourceTree = "<group>"; };
-		628459021301D312007CC17E /* KeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCalculator.m; sourceTree = "<group>"; };
+		628459011301D312007CC17E /* WLANXXXXKeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANXXXXKeyCalculator.h; sourceTree = "<group>"; };
+		628459021301D312007CC17E /* WLANXXXXKeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLANXXXXKeyCalculator.m; sourceTree = "<group>"; };
 		6291309712FF293500BE76ED /* MSNetworksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNetworksManager.h; sourceTree = "<group>"; };
 		6291309812FF293500BE76ED /* MSNetworksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNetworksManager.m; sourceTree = "<group>"; };
 		6291309D12FF2BBF00BE76ED /* NetworkListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkListController.h; sourceTree = "<group>"; };
 		6291309E12FF2BBF00BE76ED /* NetworkListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkListController.m; sourceTree = "<group>"; };
 		6291309F12FF2BBF00BE76ED /* NetworkListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NetworkListController.xib; path = Classes/NetworkListController.xib; sourceTree = "<group>"; };
-		62989D91138DB78400EECD4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		62989D9B138DBEE200EECD4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Settings.bundle/en.lproj/Root.strings; sourceTree = "<group>"; };
-		62989D9D138DBF2300EECD4F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Settings.bundle/es.lproj/Root.strings; sourceTree = "<group>"; };
+		629C7C76140853570046AB27 /* KeyListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyListController.h; sourceTree = "<group>"; };
+		629C7C77140853570046AB27 /* KeyListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyListController.m; sourceTree = "<group>"; };
+		629C7C78140853570046AB27 /* KeyListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KeyListController.xib; path = Classes/KeyListController.xib; sourceTree = "<group>"; };
 		62A0E5D0130306100094863D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		62A0E5D1130306100094863D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62A0E5D2130306100094863D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -76,6 +77,9 @@
 		62A0E64813030B700094863D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62A0E67913031A1D0094863D /* AdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdDelegate.h; sourceTree = "<group>"; };
 		62A0E67A13031A1D0094863D /* AdDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdDelegate.m; sourceTree = "<group>"; };
+		62C182DB1407060E00052601 /* KeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCalculator.h; sourceTree = "<group>"; };
+		62C182DC1407072D00052601 /* WiFiXXXXXXKeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiXXXXXXKeyCalculator.h; sourceTree = "<group>"; };
+		62C182DD1407072D00052601 /* WiFiXXXXXXKeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiXXXXXXKeyCalculator.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WLANAudit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WLANAudit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +111,15 @@
 				1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */,
 				6291309D12FF2BBF00BE76ED /* NetworkListController.h */,
 				6291309E12FF2BBF00BE76ED /* NetworkListController.m */,
-				628459011301D312007CC17E /* KeyCalculator.h */,
-				628459021301D312007CC17E /* KeyCalculator.m */,
+				628459011301D312007CC17E /* WLANXXXXKeyCalculator.h */,
+				62C182DB1407060E00052601 /* KeyCalculator.h */,
+				628459021301D312007CC17E /* WLANXXXXKeyCalculator.m */,
 				62A0E67913031A1D0094863D /* AdDelegate.h */,
 				62A0E67A13031A1D0094863D /* AdDelegate.m */,
+				62C182DC1407072D00052601 /* WiFiXXXXXXKeyCalculator.h */,
+				62C182DD1407072D00052601 /* WiFiXXXXXXKeyCalculator.m */,
+				629C7C76140853570046AB27 /* KeyListController.h */,
+				629C7C77140853570046AB27 /* KeyListController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -148,9 +157,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				62989D91138DB78400EECD4F /* Settings.bundle */,
+				629C7C78140853570046AB27 /* KeyListController.xib */,
 				621CEEFF1343B95300F04E32 /* Localizable.strings */,
-				62989D9A138DBEE200EECD4F /* Root.strings */,
 				62A0E5D0130306100094863D /* Default.png */,
 				62A0E5D1130306100094863D /* Default@2x.png */,
 				62A0E5D2130306100094863D /* icon.png */,
@@ -265,9 +273,8 @@
 				62A0E5D6130306100094863D /* icon.png in Resources */,
 				62A0E5D7130306100094863D /* icon@2x.png in Resources */,
 				621CEF011343B95300F04E32 /* Localizable.strings in Resources */,
-				62989D92138DB78400EECD4F /* Settings.bundle in Resources */,
 				62989D9C138DBEE200EECD4F /* Root.strings in Resources */,
-				62989D9E138DBF2300EECD4F /* Root.strings in Resources */,
+				629C7C7A140853570046AB27 /* KeyListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +305,10 @@
 				1D3623260D0F684500981E51 /* WLANAuditAppDelegate.m in Sources */,
 				6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */,
 				629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */,
-				628459031301D312007CC17E /* KeyCalculator.m in Sources */,
+				628459031301D312007CC17E /* WLANXXXXKeyCalculator.m in Sources */,
 				62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */,
+				62C182DE1407072D00052601 /* WiFiXXXXXXKeyCalculator.m in Sources */,
+				629C7C79140853570046AB27 /* KeyListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,11 +327,10 @@
 		62989D9A138DBEE200EECD4F /* Root.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				62989D9B138DBEE200EECD4F /* en */,
-				62989D9D138DBF2300EECD4F /* es */,
 			);
 			name = Root.strings;
-			sourceTree = "<group>";
+			path = /Users/roberto/Documents/Developer/WLANAudit;
+			sourceTree = "<absolute>";
 		};
 /* End PBXVariantGroup section */
 

@@ -27,13 +27,13 @@
     // Network data
     NSArray *wlanNetworks;
 	NSArray *wlanBSSIDS;
-	NSString *wlanKey;
+	NSArray *wlanKeys;
 }
 - (void)scanForNetworks;
 - (void)showAboutBox;
 
 @property (nonatomic,retain) NSArray *wlanNetworks;
 @property (nonatomic,retain) NSArray *wlanBSSIDS;
-@property (nonatomic,retain) NSString *wlanKey;
+@property (nonatomic,retain) NSArray *wlanKeys;
 
 @end
