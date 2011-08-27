@@ -168,6 +168,8 @@
     }else if([wifixxxxxx evaluateWithObject:wlanESSID]) {
         // WiFiXXXXXX Code
         self.wlanKeys = [WiFiXXXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
+    }else {        
+        self.wlanKeys = nil;
     }
 	
 	
@@ -177,7 +179,7 @@
 		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP Inseguro, clave encontrada")
 														 message:[NSString stringWithFormat:NSLocalizedString(@"unsafe_ap_message",
 																											  @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@"),
-																  wlanESSID,wlanKeys]
+																  wlanESSID,[self.wlanKeys objectAtIndex:0]]
 														delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:NSLocalizedString(@"copy_button",@"Copiar"),nil] autorelease];
 		[msgBox show];
 		
@@ -221,6 +223,7 @@
     [adView release];
 	[wlanNetworks release];
 	[wlanBSSIDS release];
+    [wlanKeys release];
 }
 
 
