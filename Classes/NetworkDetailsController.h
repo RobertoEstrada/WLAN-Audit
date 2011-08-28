@@ -18,11 +18,19 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GADBannerView.h"
+#import "Key.h"
+
 @interface NetworkDetailsController : UITableViewController<UIAlertViewDelegate> {
+    // Admob banner
+    GADBannerView *adView;
+    // Network details
     NSDictionary *networkDetails;
+    // List of possible keys for this network
     NSArray *wlanKeys;
 }
 
 @property(nonatomic,retain) NSDictionary *networkDetails;
+@property(nonatomic,retain) NSArray *wlanKeys;
 
 @end

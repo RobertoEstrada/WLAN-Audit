@@ -16,10 +16,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "NetworkDetailsController.h"
-#import "WLANXXXXKeyCalculator.h"
-#import "WiFiXXXXXXKeyCalculator.h"
+#import "AdDelegate.h"
 #import "KeyListController.h"
+#import "NetworkDetailsController.h"
+#import "WiFiXXXXXXKeyCalculator.h"
+#import "WLANXXXXKeyCalculator.h"
 
 #define NETWORK_BASIC_DATA_SECTION 0
 #define NETWORK_ADDITIONAL_DATA_SECTION 1
@@ -36,7 +37,18 @@
 
 @implementation NetworkDetailsController
 
-@synthesize networkDetails;
+@synthesize networkDetails,wlanKeys;
+
+#pragma mark -
+#pragma mark Ad Setup method
+
+- (void)adSetup {
+    adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0, 0.0, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    adView.adUnitID = ADMOB_API_KEY;
+    adView.rootViewController = self;
+    adView.delegate = [[AdDelegate alloc] initWithViewController:self];
+    [adView loadRequest:[GADRequest request]];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -50,6 +62,7 @@
 - (void)dealloc
 {
     [super dealloc];
+    [wlanKeys release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +85,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    adView.delegate = nil;
+    [adView release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -82,6 +97,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    // Ad load
+    [self adSetup];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -222,6 +239,7 @@
             switch (indexPath.row) {
                 case 0:
                     cell.textLabel.text = NSLocalizedString(@"network_keys", @"Show network keys");
+                    cell.detailTextLabel.text = @"";
             }
             break;
         default:
@@ -247,12 +265,12 @@
         // Result
         if ([wlanxxxx evaluateWithObject:wlanESSID]){
             // WLAN_XXXX Code
-            wlanKeys = [WLANXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
+            self.wlanKeys = [WLANXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
         }else if([wifixxxxxx evaluateWithObject:wlanESSID]) {
             // WiFiXXXXXX Code
-            wlanKeys = [WiFiXXXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
+            self.wlanKeys = [WiFiXXXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
         }else {        
-            wlanKeys = nil;
+            self.wlanKeys = nil;
         }
         
         
@@ -262,14 +280,14 @@
             UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP Inseguro, clave encontrada")
                                                              message:[NSString stringWithFormat:NSLocalizedString(@"unsafe_ap_message",
                                                                                                                   @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@"),
-                                                                      wlanESSID,[wlanKeys objectAtIndex:0]]
+                                                                      wlanESSID,[self.wlanKeys objectAtIndex:0]]
                                                             delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:NSLocalizedString(@"copy_button",@"Copiar"),nil] autorelease];
             [msgBox show];
             
         }else if (wlanKeys != nil && [wlanKeys count] > 1){
             // Multiple keys need to be displayed
             KeyListController *keyListController = [[KeyListController alloc] initWithNibName:@"KeyListController" bundle:nil];
-            keyListController.keyList = wlanKeys;
+            keyListController.keyList = self.wlanKeys;
             keyListController.wlanESSID = wlanESSID;
             [self.navigationController pushViewController:keyListController animated:YES];
             [keyListController release];
@@ -287,7 +305,7 @@
 #pragma mark Alert view delegate
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
 	if (buttonIndex == 1) {
-		[UIPasteboard generalPasteboard].string = (NSString*) [wlanKeys objectAtIndex:0];
+		[UIPasteboard generalPasteboard].string = (NSString*) [self.wlanKeys objectAtIndex:0];
 	}
 	
 }
