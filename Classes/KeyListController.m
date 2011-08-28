@@ -18,6 +18,7 @@
 
 #import "KeyListController.h"
 #import "AdDelegate.h"
+#import "Key.h"
 
 @implementation KeyListController
 
@@ -30,7 +31,6 @@
     adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0, 0.0, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
     adView.adUnitID = ADMOB_API_KEY;
     adView.rootViewController = self;
-    [self.view addSubview:adView];
     adView.delegate = [[AdDelegate alloc] initWithViewController:self];
     [adView loadRequest:[GADRequest request]];
 }
@@ -62,7 +62,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"WLANAudit";
+    self.title = NSLocalizedString(@"key_list", "Key list");
 }
 
 - (void)viewDidUnload

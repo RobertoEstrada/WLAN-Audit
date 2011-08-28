@@ -1,5 +1,5 @@
 /*
- * NetworkListController.h
+ * NetworkDetailsController.h
  *
  * Copyright 2011 Roberto Estrada
  *
@@ -18,21 +18,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GADBannerView.h"
-#import "Key.h"
-
-@interface NetworkListController : UITableViewController <UITableViewDelegate, UIAlertViewDelegate> {
-	// Admob banner
-    GADBannerView *adView;
-    // Network data
-    NSArray *wlanNetworks;
-	NSArray *wlanBSSIDS;	
+@interface NetworkDetailsController : UITableViewController<UIAlertViewDelegate> {
+    NSDictionary *networkDetails;
+    NSArray *wlanKeys;
 }
-- (void)scanForNetworks;
-- (void)showAboutBox;
 
-@property (nonatomic,retain) NSArray *wlanNetworks;
-@property (nonatomic,retain) NSArray *wlanBSSIDS;
-
+@property(nonatomic,retain) NSDictionary *networkDetails;
 
 @end

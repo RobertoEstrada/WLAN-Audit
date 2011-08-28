@@ -19,7 +19,6 @@
 #import <UIKit/UIKit.h>
 
 #import "GADBannerView.h"
-#import "Key.h"
 
 @interface KeyListController : UITableViewController<UIAlertViewDelegate> {
     // Admob banner

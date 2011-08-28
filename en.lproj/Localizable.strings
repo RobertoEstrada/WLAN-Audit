@@ -19,3 +19,29 @@
 /* AP Inseguro, clave encontrada */
 "unsafe_ap_title" = "Unsafe AP, key found";
 
+/* Channel */
+"channel" = "Channel";
+
+/* Mode */
+"mode" = "Mode";
+
+/* Show network keys */
+"network_keys" = "Compute network keys";
+
+/* Key list controller title */
+"key_list" = "Key list";
+
+/* Network details controller title */
+"network_details" = "Network details";
+
+/* Network name */
+"network_basic_data_section" = "Network name";
+
+/* Network details */
+"network_additional_data_section" = "Network data";
+
+/* Keys section */
+"copy_keys_button_section" = "Network security data";
+
+
+

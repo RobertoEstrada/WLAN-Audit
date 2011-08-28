@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		6212E12314098D0A0079AF6C /* NetworkDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212E12114098D0A0079AF6C /* NetworkDetailsController.m */; };
+		6212E12414098D0A0079AF6C /* NetworkDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6212E12214098D0A0079AF6C /* NetworkDetailsController.xib */; };
 		621CEF011343B95300F04E32 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 621CEEFF1343B95300F04E32 /* Localizable.strings */; };
 		623A5676138E691000D21FFB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5673138E691000D21FFB /* libGoogleAdMobAds.a */; };
 		623A5679138E708100D21FFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5678138E708100D21FFB /* SystemConfiguration.framework */; };
@@ -43,6 +45,9 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* WLANAudit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANAudit_Prefix.pch; sourceTree = "<group>"; };
+		6212E12014098D0A0079AF6C /* NetworkDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDetailsController.h; sourceTree = "<group>"; };
+		6212E12114098D0A0079AF6C /* NetworkDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDetailsController.m; sourceTree = "<group>"; };
+		6212E12214098D0A0079AF6C /* NetworkDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NetworkDetailsController.xib; path = Classes/NetworkDetailsController.xib; sourceTree = "<group>"; };
 		621CEF001343B95300F04E32 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		621CEF0F1343BA7700F04E32 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		623A566B138E691000D21FFB /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
@@ -104,9 +109,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				62FC967E14098B8D0051BB2F /* Controllers */,
 				62FC967D14098B6C0051BB2F /* Ads */,
 				62FC967C14098B510051BB2F /* Contrib */,
+				62FC967E14098B8D0051BB2F /* Controllers */,
 				62FC967B14098ACC0051BB2F /* Key Calculators */,
 				1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */,
 				1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */,
@@ -147,6 +152,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6212E12214098D0A0079AF6C /* NetworkDetailsController.xib */,
 				629C7C78140853570046AB27 /* KeyListController.xib */,
 				621CEEFF1343B95300F04E32 /* Localizable.strings */,
 				62A0E5D0130306100094863D /* Default.png */,
@@ -238,6 +244,8 @@
 				6291309E12FF2BBF00BE76ED /* NetworkListController.m */,
 				629C7C76140853570046AB27 /* KeyListController.h */,
 				629C7C77140853570046AB27 /* KeyListController.m */,
+				6212E12014098D0A0079AF6C /* NetworkDetailsController.h */,
+				6212E12114098D0A0079AF6C /* NetworkDetailsController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 				62A0E5D7130306100094863D /* icon@2x.png in Resources */,
 				621CEF011343B95300F04E32 /* Localizable.strings in Resources */,
 				629C7C7A140853570046AB27 /* KeyListController.xib in Resources */,
+				6212E12414098D0A0079AF6C /* NetworkDetailsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +348,7 @@
 				62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */,
 				62C182DE1407072D00052601 /* WiFiXXXXXXKeyCalculator.m in Sources */,
 				629C7C79140853570046AB27 /* KeyListController.m in Sources */,
+				6212E12314098D0A0079AF6C /* NetworkDetailsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

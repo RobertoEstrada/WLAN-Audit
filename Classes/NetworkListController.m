@@ -17,16 +17,13 @@
  */
 
 #import "AdDelegate.h"
-#import "WLANXXXXKeyCalculator.h"
-#import "WiFiXXXXXXKeyCalculator.h"
 #import "NetworkListController.h"
 #import "MSNetworksManager.h"
-#import "KeyListController.h"
-
+#import "NetworkDetailsController.h"
 
 @implementation NetworkListController
 
-@synthesize wlanNetworks,wlanBSSIDS,wlanKeys;
+@synthesize wlanNetworks,wlanBSSIDS;
 
 #pragma mark -
 #pragma mark Ad Setup method
@@ -35,7 +32,6 @@
     adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0, 0.0, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
     adView.adUnitID = ADMOB_API_KEY;
     adView.rootViewController = self;
-    [self.view addSubview:adView];
     adView.delegate = [[AdDelegate alloc] initWithViewController:self];
     [adView loadRequest:[GADRequest request]];
 }
@@ -153,58 +149,10 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	// Network data
-	NSString *wlanESSID  = [[wlanNetworks objectAtIndex:indexPath.row]objectForKey:@"SSID_STR"];
-	NSString *wlanBSSID = [[self formattedBSSIDfrom:[wlanBSSIDS objectAtIndex:indexPath.row]]uppercaseString];
-    
-    // Key calculation
-    NSPredicate *wlanxxxx = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|JAZZTEL_....'"];
-    NSPredicate *wifixxxxxx = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN......|YACOM......|WiFi......'"];
-	
-	// Result
-    if ([wlanxxxx evaluateWithObject:wlanESSID]){
-        // WLAN_XXXX Code
-        self.wlanKeys = [WLANXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
-    }else if([wifixxxxxx evaluateWithObject:wlanESSID]) {
-        // WiFiXXXXXX Code
-        self.wlanKeys = [WiFiXXXXXXKeyCalculator calculateKeyWithESSID:wlanESSID BSSID:wlanBSSID];
-    }else {        
-        self.wlanKeys = nil;
-    }
-	
-	
-	// Result display
-	if (wlanKeys != nil && [wlanKeys count] == 1) {
-        // There's only one key
-		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP Inseguro, clave encontrada")
-														 message:[NSString stringWithFormat:NSLocalizedString(@"unsafe_ap_message",
-																											  @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@"),
-																  wlanESSID,[self.wlanKeys objectAtIndex:0]]
-														delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:NSLocalizedString(@"copy_button",@"Copiar"),nil] autorelease];
-		[msgBox show];
-		
-	}else if (wlanKeys != nil && [wlanKeys count] > 1){
-        // Multiple keys need to be displayed
-        KeyListController *keyListController = [[KeyListController alloc] initWithNibName:@"KeyListController" bundle:nil];
-        keyListController.keyList = wlanKeys;
-        keyListController.wlanESSID = wlanESSID;
-        [self.navigationController pushViewController:keyListController animated:YES];
-        [keyListController release];
-    }else {
-		UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"safe_ap_title",@"AP seguro, clave no encontrada")
-														 message:NSLocalizedString(@"safe_ap_message",@"No se pudo encontrar la clave, el AP no tiene una clave que pueda ser calculada mediante sus datos publicos.")
-														delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
-		[msgBox show];
-	}
-}
-
-#pragma mark -
-#pragma mark Alert view delegate
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-	if (buttonIndex == 1) {
-		[UIPasteboard generalPasteboard].string = (NSString*) [self.wlanKeys objectAtIndex:0];
-	}
-	
+    NetworkDetailsController *netDetailsController = [[NetworkDetailsController alloc] initWithNibName:@"NetworkDetailsController" bundle:nil];
+    netDetailsController.networkDetails = [self.wlanNetworks objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:netDetailsController animated:YES];
+    [netDetailsController release];
 }
 
 #pragma mark -
@@ -221,14 +169,13 @@
     // For example: self.myOutlet = nil;
     adView.delegate = nil;
     [adView release];
-	[wlanNetworks release];
-	[wlanBSSIDS release];
-    [wlanKeys release];
 }
 
 
 - (void)dealloc {
     [super dealloc];
+    [wlanNetworks release];
+	[wlanBSSIDS release];
 }
 
 
