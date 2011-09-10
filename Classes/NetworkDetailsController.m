@@ -16,7 +16,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "AdDelegate.h"
 #import "KeyListController.h"
 #import "NetworkDetailsController.h"
 #import "WiFiXXXXXXKeyCalculator.h"
@@ -38,17 +37,6 @@
 @implementation NetworkDetailsController
 
 @synthesize networkDetails,wlanKeys;
-
-#pragma mark -
-#pragma mark Ad Setup method
-
-- (void)adSetup {
-    adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0, 0.0, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
-    adView.adUnitID = ADMOB_API_KEY;
-    adView.rootViewController = self;
-    adView.delegate = [[AdDelegate alloc] initWithViewController:self];
-    [adView loadRequest:[GADRequest request]];
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -85,8 +73,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    adView.delegate = nil;
-    [adView release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -97,8 +83,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    // Ad load
-    [self adSetup];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

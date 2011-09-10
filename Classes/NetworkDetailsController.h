@@ -18,12 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GADBannerView.h"
-#import "Key.h"
-
 @interface NetworkDetailsController : UITableViewController<UIAlertViewDelegate> {
-    // Admob banner
-    GADBannerView *adView;
     // Network details
     NSDictionary *networkDetails;
     // List of possible keys for this network

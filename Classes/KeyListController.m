@@ -18,22 +18,10 @@
 
 #import "KeyListController.h"
 #import "AdDelegate.h"
-#import "Key.h"
 
 @implementation KeyListController
 
 @synthesize keyList,wlanESSID;
-
-#pragma mark -
-#pragma mark Ad Setup method
-
-- (void)adSetup {
-    adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0, 0.0, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
-    adView.adUnitID = ADMOB_API_KEY;
-    adView.rootViewController = self;
-    adView.delegate = [[AdDelegate alloc] initWithViewController:self];
-    [adView loadRequest:[GADRequest request]];
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -70,8 +58,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    adView.delegate = nil;
-    [adView release];
     [keyList release];
     [wlanESSID release];
 }
@@ -84,8 +70,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    // Ad load
-    [self adSetup];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

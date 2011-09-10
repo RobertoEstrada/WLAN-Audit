@@ -18,11 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GADBannerView.h"
-
 @interface KeyListController : UITableViewController<UIAlertViewDelegate> {
-    // Admob banner
-    GADBannerView *adView;
     // Key list
     NSArray *keyList;
     // Network's essid
