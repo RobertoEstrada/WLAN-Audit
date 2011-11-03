@@ -237,13 +237,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == COPY_KEYS_BUTTON_SECTION && indexPath.row == 0) {
+	if(indexPath.section == COPY_KEYS_BUTTON_SECTION && indexPath.row == 0) {
 		if (!([networkDetails objectForKey:@"WPA_IE"] || [[networkDetails objectForKey:@"WEP"] boolValue])) {
 			UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP seguro, no tiene clave")
 															 message:NSLocalizedString(@"no_key_ap_message",@"El AP no tiene clave.")
 															delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 			[msgBox show];
-			} else {
+		} else {
 			
 			// Network data
 			NSString *wlanESSID  = [NSString stringWithFormat:@"%@",[networkDetails objectForKey:@"SSID_STR"]];
@@ -290,7 +290,7 @@
 			}
 		}
 
-    }
+	}
 }
 
 #pragma mark -
