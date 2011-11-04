@@ -23,7 +23,12 @@
  *******************************************************************************/
 
 /* $HeadURL$ */
+#import <UIKit/UIKit.h>
+
 #import "MSNetworksManager.h"
+
+#define IOS_4_MAJOR_VER 4
+#define IOS_5_MAJOR_VER 5
 
 static MSNetworksManager *NetworksManager;
 
@@ -68,6 +73,15 @@ static MSNetworksManager *NetworksManager;
 {
 	return [networks objectForKey: aNetwork];
 }
+- (int)checkMajorSystemVersion
+{
+    return [[[[UIDevice currentDevice] systemVersion]substringToIndex:1]intValue];
+}
+- (int)checkMinorSystemVersion
+{
+    NSRange range = {2,3};
+    return [[[[UIDevice currentDevice] systemVersion]substringWithRange:range]intValue];
+}
 - (id)init
 {
 	self = [super init];
@@ -76,7 +90,21 @@ static MSNetworksManager *NetworksManager;
 	types = [NSArray arrayWithObjects:@"80211", @"Bluetooth", @"GSM", nil];
 	[types retain];
 	autoScanInterval = 5; //seconds
-	libHandle = dlopen("/System/Library/SystemConfiguration/WiFiManager.bundle/WiFiManager", RTLD_LAZY);
+    if([self checkMajorSystemVersion] == IOS_4_MAJOR_VER)
+    {
+        if([[[UIDevice currentDevice] systemVersion] isEqualToString:@"4.3.5"])
+        {
+            libHandle = dlopen("/System/Library/SystemConfiguration/IPConfiguration.bundle/IPConfiguration", RTLD_LAZY);
+        }
+        else
+        {
+            libHandle = dlopen("/System/Library/SystemConfiguration/WiFiManager.bundle/WiFiManager", RTLD_LAZY);
+        }        
+    }
+    else if([self checkMajorSystemVersion] == IOS_5_MAJOR_VER)
+    {
+        libHandle = dlopen("/System/Library/SystemConfiguration/IPConfiguration.bundle/IPConfiguration", RTLD_LAZY);
+    }
 	open = dlsym(libHandle, "Apple80211Open");
 	bind = dlsym(libHandle, "Apple80211BindToInterface");
 	close = dlsym(libHandle, "Apple80211Close");
