@@ -1,5 +1,5 @@
 /* WLAN Audit (C)2011 Roberto Estrada\n\nEsta es una aplicacion pensada para auditar la seguridad de las claves de acceso de los puntos de acceso WLAN comprobando si pueden ser calculadas a traves de los datos publicos de la red.No me responsabilizo del uso que pueda derivarse de esta aplicacion\n\nBasado en el codigo de %@\n\nPuedes descargar el codigo desde:\n%@\n\nCompilado:%@ */
-"about_message" = "WLAN Audit (C) 2011 Roberto Estrada\n\nAn application to audit the security of WLAN Access points. The application tries to guess the access point default password via a public know algorithm. This app is NOT MEANT to be used as a hacking utility, so I'm not responsible of the usage you make of it.\n\nBased on the code from %@\n\nWLANXXXXXX algorithm by Mambostar http://www.seguridadwireless.net\n\nThe icon is under CC-BY-SA 3.0 license and is a derived from artwork of the Open Security Architecture http://www.opensecurityarchitecture.org/cms/en/library/icon-library \n\nYou can download the source code from:\n%@\n\nBuild date:%@";
+"about_message" = "WLAN Audit (C) 2011 Roberto Estrada\n\nAn application to audit the security of WLAN Access points. The application tries to guess the access point default password via a public know algorithm. This app is NOT MEANT to be used as a hacking utility, so I'm not responsible of the usage you make of it.\n\nBased on the code from %@\n\nAlgorithms by Dudu (dudu@seguridadwireless.net) and Mambostar http://www.seguridadwireless.net\n\nThe icon is under CC-BY-SA 3.0 license and is a derived from artwork of the Open Security Architecture http://www.opensecurityarchitecture.org/cms/en/library/icon-library \n\nYou can download the source code from:\n%@\n\nBuild date:%@";
 
 /* Acerca de... */
 "about_title" = "About WLAN Audit";
@@ -18,6 +18,12 @@
 
 /* AP Inseguro, clave encontrada */
 "unsafe_ap_title" = "Unsafe AP, key found";
+
+/* AP Posiblemente vulnerable */
+"vulnerable_ap_title" = "Potentially vulnerable AP";
+
+/* El AP no tiene clave. */
+"no_key_ap_message" = "AP is not using WEP nor WPA encryptions and may have no key, but it also may be using WPA2.";
 
 /* Channel */
 "channel" = "Channel";
