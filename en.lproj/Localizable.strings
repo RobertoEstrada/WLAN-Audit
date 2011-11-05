@@ -19,6 +19,9 @@
 /* AP Inseguro, clave encontrada */
 "unsafe_ap_title" = "Unsafe AP, key found";
 
+/* El AP no tiene clave. */
+"no_key_ap_message" = "AP has no key.";
+
 /* Channel */
 "channel" = "Channel";
 
