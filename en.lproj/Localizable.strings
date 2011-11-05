@@ -19,8 +19,11 @@
 /* AP Inseguro, clave encontrada */
 "unsafe_ap_title" = "Unsafe AP, key found";
 
+/* AP Posiblemente vulnerable */
+"vulnerable_ap_title" = "Potentially vulnerable AP";
+
 /* El AP no tiene clave. */
-"no_key_ap_message" = "AP has no key.";
+"no_key_ap_message" = "AP is not using WEP nor WPA encryptions and may have no key, but it also may be using WPA2.";
 
 /* Channel */
 "channel" = "Channel";

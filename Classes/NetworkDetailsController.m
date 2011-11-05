@@ -239,7 +239,7 @@
 {
 	if(indexPath.section == COPY_KEYS_BUTTON_SECTION && indexPath.row == 0) {
 		if (!([networkDetails objectForKey:@"WPA_IE"] || [[networkDetails objectForKey:@"WEP"] boolValue])) {
-			UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"unsafe_ap_title",@"AP seguro, no tiene clave")
+			UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"vulnerable_ap_title",@"AP Posiblemente vulnerable")
 															 message:NSLocalizedString(@"no_key_ap_message",@"El AP no tiene clave.")
 															delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 			[msgBox show];
