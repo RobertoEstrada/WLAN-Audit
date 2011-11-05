@@ -33,6 +33,9 @@ typedef enum {
   // The request was unable to be loaded before being timed out.
   kGADErrorTimeout,
 
+  // The mediation request encountered an error.
+  kGADMediationError,
+
 } GADErrorCode;
 
 // This class represents the error generated due to invalid request parameters.
