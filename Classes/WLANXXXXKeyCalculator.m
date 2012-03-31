@@ -19,6 +19,10 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "WLANXXXXKeyCalculator.h"
 
+// Definition of router kinds
+#define COM_KIND 1
+#define ZYX_KIND 2
+#define UNK_KIND 3
 
 @implementation WLANXXXXKeyCalculator
 
@@ -35,13 +39,29 @@
 			];	
 }
 
-+(NSArray*) calculateKeyWithESSID:(NSString*) essid BSSID:(NSString*) bssid {
++ (NSInteger) getRouterKind:(NSString*) bssid {
+    
+    // Regular expressions to determine which router kind is being audited
+    NSPredicate *com_kind_bssids = [NSPredicate predicateWithFormat:@"SELF MATCHES '(((64:68:0C|00:1D:20)|(00:1B:20|00:23:F8)):[0-9A-Fa-f:]{8})'"];
+    NSPredicate *zyx_kind_bssids = [NSPredicate predicateWithFormat:@"SELF MATCHES '(00:1F:A4:[0-9A-Fa-f:]{8})'"];
+    
+    if ([com_kind_bssids evaluateWithObject:bssid]) {
+        return COM_KIND;
+    }else if ([zyx_kind_bssids evaluateWithObject:bssid]) {
+        return ZYX_KIND;
+    }
+    
+    return UNK_KIND;    
+}
 
-    NSPredicate *validSSIDs = [NSPredicate predicateWithFormat:@"SELF MATCHES 'WLAN_....|JAZZTEL_....'"];       
++ (NSArray*) calculateKeyWithESSID:(NSString*) essid BSSID:(NSString*) bssid {
+
+    NSPredicate *validSSIDs = [NSPredicate predicateWithFormat:@"SELF MATCHES '(?:WLAN|JAZZTEL)_([0-9a-fA-F]{4})'"];       
 	
 	NSString *trimmedBSSID = [bssid stringByReplacingOccurrencesOfString:@":" withString:@""];
-	NSString *formattedESSID = nil;
-	
+	NSString *formattedESSID = nil; 
+    NSString *stringToHash = nil;
+    
 	// Removing name from the ESSID, we only want the numbers
 	if (([essid rangeOfString:@"JAZZTEL_"].location != NSNotFound) && [validSSIDs evaluateWithObject:essid]) {		
 		formattedESSID = [[essid stringByReplacingOccurrencesOfString:@"JAZZTEL_" withString:@""] uppercaseString];
@@ -51,10 +71,26 @@
 	if (formattedESSID == nil) {
 		return nil;
 	}
-	
-	// Key calculation
-	NSRange rng = {0,8};
-	NSString *stringToHash = [NSString stringWithFormat:@"%@%@%@%@",@"bcgbghgg",[trimmedBSSID substringWithRange:rng],formattedESSID,trimmedBSSID];
+    
+    // Determine router kind
+	NSInteger routerKind = [WLANXXXXKeyCalculator getRouterKind:bssid];
+    // Processing range
+    NSRange rng = {0,8};
+    
+    switch (routerKind) {
+        case COM_KIND:
+            trimmedBSSID = [trimmedBSSID uppercaseString];
+            // Key calculation            
+            stringToHash = [NSString stringWithFormat:@"%@%@%@%@",@"bcgbghgg",[trimmedBSSID substringWithRange:rng],formattedESSID,trimmedBSSID];
+            break;
+        case ZYX_KIND:
+            formattedESSID = [formattedESSID lowercaseString];
+            trimmedBSSID = [trimmedBSSID lowercaseString];
+            stringToHash = [[NSString stringWithFormat:@"%@%@",[trimmedBSSID substringWithRange:rng],formattedESSID]lowercaseString];
+            break;
+        case UNK_KIND:
+            return nil;
+    }	
 	
 	// Hashing	
 	NSRange resultrange = {0,20};
