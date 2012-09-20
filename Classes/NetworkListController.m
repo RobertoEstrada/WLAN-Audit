@@ -134,8 +134,8 @@
     }
 
     // Getting Network Data	
-    NSString *wlanName = [[wlanNetworks objectAtIndex:indexPath.row] objectForKey:@"SSID_STR"];
-    NSString *wlanBSSID = [[self formattedBSSIDfrom:[wlanBSSIDS objectAtIndex:indexPath.row]] uppercaseString];
+    NSString *wlanName = [[wlanNetworks objectAtIndex:(NSUInteger) indexPath.row] objectForKey:@"SSID_STR"];
+    NSString *wlanBSSID = [[self formattedBSSIDfrom:[wlanBSSIDS objectAtIndex:(NSUInteger) indexPath.row]] uppercaseString];
 
     // Configuring cell to show WLAN Data
     cell.textLabel.text = wlanName;
@@ -149,7 +149,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NetworkDetailsController *netDetailsController = [[NetworkDetailsController alloc] initWithNibName:@"NetworkDetailsController" bundle:nil];
-    netDetailsController.networkDetails = [self.wlanNetworks objectAtIndex:indexPath.row];
+    netDetailsController.networkDetails = [self.wlanNetworks objectAtIndex:(NSUInteger) indexPath.row];
     [self.navigationController pushViewController:netDetailsController animated:YES];
     [netDetailsController release];
 }
@@ -175,6 +175,8 @@
     [super dealloc];
     [wlanNetworks release];
     [wlanBSSIDS release];
+    [super dealloc];
+    [adView release];
 }
 
 

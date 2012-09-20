@@ -31,6 +31,8 @@
 }
 
 - (void)dealloc {
+    [keyList release];
+    [wlanESSID release];
     [super dealloc];
 }
 
@@ -98,7 +100,7 @@
     }
 
     // Configure the cell...
-    cell.textLabel.text = [keyList objectAtIndex:indexPath.row];
+    cell.textLabel.text = [keyList objectAtIndex:(NSUInteger) indexPath.row];
 
     return cell;
 }
@@ -106,7 +108,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    selectedKey = indexPath.row;
+    selectedKey = (NSUInteger) indexPath.row;
     UIAlertView *msgBox = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"unsafe_ap_title", @"AP Inseguro, clave encontrada") message:[NSString stringWithFormat:NSLocalizedString(@"unsafe_ap_message",
                                                                                                                                                                          @"Se pudo calcular una posible clave por defecto a traves de los datos publicos.\n\nSi no se trata de tu AP, avisa a su propietario de que cambie la clave de su red.\n\nLa clave de la red %@ parece ser:\n%@"),
                                                                                                                                                                          wlanESSID, [self.keyList objectAtIndex:selectedKey]]

@@ -49,6 +49,8 @@
 - (void)dealloc {
     [super dealloc];
     [wlanKeys release];
+    [super dealloc];
+    [networkDetails release];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -119,6 +121,8 @@
             return NSLocalizedString(@"network_additional_data_section", @"Network data");
         case COPY_KEYS_BUTTON_SECTION:
             return NSLocalizedString(@"copy_keys_button_section", @"Keys");
+        default:
+            break;
     }
     return nil;
 }
@@ -167,6 +171,8 @@
                     cellValue = [[self formattedBSSIDfrom:[networkDetails objectForKey:@"BSSID"]] uppercaseString];
                     cell.detailTextLabel.text = cellValue;
                     break;
+                default:
+                    break;
             }
             break;
         case NETWORK_ADDITIONAL_DATA_SECTION:
@@ -184,7 +190,7 @@
                     } else if ([mode isEqualToNumber:[NSNumber numberWithInt:2]]) {
                         cellValue = @"Infrastructure";
                     } else {
-                        cellValue = [NSString stringWithFormat:@"%d", mode];
+                        cellValue = [NSString stringWithFormat:@"%d", [mode intValue]];
                     }
                     cell.detailTextLabel.text = cellValue;
                     break;
@@ -203,6 +209,8 @@
                     cellValue = [NSString stringWithFormat:@"%@", [networkDetails objectForKey:@"WPA_IE"] ? @"YES" : @"NO"];
                     cell.detailTextLabel.text = cellValue;
                     break;
+                default:
+                    break;
             }
             break;
         case COPY_KEYS_BUTTON_SECTION:
@@ -210,6 +218,8 @@
                 case 0:
                     cell.textLabel.text = NSLocalizedString(@"network_keys", @"Show network keys");
                     cell.detailTextLabel.text = @"";
+                default:
+                    break;
             }
             break;
         default:

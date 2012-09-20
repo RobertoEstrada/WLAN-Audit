@@ -90,6 +90,8 @@
             break;
         case UNK_KIND:
             return nil;
+        default:
+            return nil;
     }
 
     // Hashing

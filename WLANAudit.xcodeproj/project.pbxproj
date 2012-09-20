@@ -368,7 +368,7 @@
 				GCC_PREFIX_HEADER = WLANAudit_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "WLANAudit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libs/GoogleAdMobAdsSDK\"",
@@ -390,7 +390,7 @@
 				GCC_PREFIX_HEADER = WLANAudit_Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "WLANAudit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libs/GoogleAdMobAdsSDK\"",
