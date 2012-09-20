@@ -18,14 +18,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NetworkDetailsController : UITableViewController<UIAlertViewDelegate> {
+@interface NetworkDetailsController : UITableViewController <UIAlertViewDelegate> {
     // Network details
     NSDictionary *networkDetails;
     // List of possible keys for this network
     NSArray *wlanKeys;
 }
 
-@property(nonatomic,retain) NSDictionary *networkDetails;
-@property(nonatomic,retain) NSArray *wlanKeys;
+@property(nonatomic, retain) NSDictionary *networkDetails;
+@property(nonatomic, retain) NSArray *wlanKeys;
 
 @end

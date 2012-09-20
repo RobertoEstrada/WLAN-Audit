@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KeyListController : UITableViewController<UIAlertViewDelegate> {
+@interface KeyListController : UITableViewController <UIAlertViewDelegate> {
     // Key list
     NSArray *keyList;
     // Network's essid
@@ -27,7 +27,7 @@
     NSUInteger selectedKey;
 }
 
-@property(nonatomic,retain) NSArray *keyList;
-@property(nonatomic,retain) NSString *wlanESSID;
+@property(nonatomic, retain) NSArray *keyList;
+@property(nonatomic, retain) NSString *wlanESSID;
 
 @end

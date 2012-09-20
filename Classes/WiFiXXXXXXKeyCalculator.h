@@ -19,8 +19,8 @@
 #import <Foundation/Foundation.h>
 #import "KeyCalculator.h"
 
-@interface WiFiXXXXXXKeyCalculator : NSObject<KeyCalculator> {
-    
+@interface WiFiXXXXXXKeyCalculator : NSObject <KeyCalculator> {
+
 }
 
 @end

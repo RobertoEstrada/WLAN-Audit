@@ -21,6 +21,6 @@
 
 @protocol KeyCalculator <NSObject>
 
-+(NSArray*) calculateKeyWithESSID:(NSString*)essid BSSID:(NSString*)bssid;
++ (NSArray *)calculateKeyWithESSID:(NSString *)essid BSSID:(NSString *)bssid;
 @end
 

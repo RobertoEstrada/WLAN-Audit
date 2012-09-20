@@ -20,10 +20,10 @@
 #import "KeyCalculator.h"
 
 
-@interface WLANXXXXKeyCalculator : NSObject<KeyCalculator> {
-    
+@interface WLANXXXXKeyCalculator : NSObject <KeyCalculator> {
+
 }
 
-+(NSArray*) calculateKeyWithESSID:(NSString*)essid BSSID:(NSString*)bssid;
++ (NSArray *)calculateKeyWithESSID:(NSString *)essid BSSID:(NSString *)bssid;
 
 @end

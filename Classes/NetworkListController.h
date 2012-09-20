@@ -22,17 +22,18 @@
 #import "Key.h"
 
 @interface NetworkListController : UITableViewController <UITableViewDelegate, UIAlertViewDelegate> {
-	// Admob banner
+    // Admob banner
     GADBannerView *adView;
     // Network data
     NSArray *wlanNetworks;
-	NSArray *wlanBSSIDS;	
+    NSArray *wlanBSSIDS;
 }
 - (void)scanForNetworks;
+
 - (void)showAboutBox;
 
-@property (nonatomic,retain) NSArray *wlanNetworks;
-@property (nonatomic,retain) NSArray *wlanBSSIDS;
+@property(nonatomic, retain) NSArray *wlanNetworks;
+@property(nonatomic, retain) NSArray *wlanBSSIDS;
 
 
 @end

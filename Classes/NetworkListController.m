@@ -23,7 +23,7 @@
 
 @implementation NetworkListController
 
-@synthesize wlanNetworks,wlanBSSIDS;
+@synthesize wlanNetworks, wlanBSSIDS;
 
 #pragma mark -
 #pragma mark Ad Setup method
@@ -41,25 +41,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Refresh button
-	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-																				   target:self action:@selector(scanForNetworks)];
-	self.navigationItem.rightBarButtonItem = refreshButton;
-	[refreshButton release];
-	// About button
-	UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithTitle:@"?" style:UIBarButtonItemStylePlain
-																   target:self action:@selector(showAboutBox)];
-	self.navigationItem.leftBarButtonItem = aboutButton;
-	[aboutButton release];
-	
-	// Notification of scan completion
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataSourceUpdated) name:@"stoppedScanning" object:nil];
+    // Refresh button
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                   target:self action:@selector(scanForNetworks)];
+    self.navigationItem.rightBarButtonItem = refreshButton;
+    [refreshButton release];
+    // About button
+    UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithTitle:@"?" style:UIBarButtonItemStylePlain
+                                                                   target:self action:@selector(showAboutBox)];
+    self.navigationItem.leftBarButtonItem = aboutButton;
+    [aboutButton release];
+
+    // Notification of scan completion
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataSourceUpdated) name:@"stoppedScanning" object:nil];
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
-	[self scanForNetworks];
-	// Ad load
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self scanForNetworks];
+    // Ad load
     [self adSetup];
 }
 
@@ -67,49 +67,48 @@
 #pragma mark UI Event handler methods
 
 - (void)scanForNetworks {
-	MSNetworksManager *wlanManager = [MSNetworksManager sharedNetworksManager];
+    MSNetworksManager *wlanManager = [MSNetworksManager sharedNetworksManager];
     [wlanManager removeAllNetworks];
-	[wlanManager scan];
+    [wlanManager scan];
 }
 
 - (void)showAboutBox {
-	NSString *refURL = @"http://kz.ath.cx/wlan/codigo.txt";
-	NSString *sourceURL = @"https://github.com/RobertoEstrada/WLAN-Audit";
-	NSString *buildDate = [NSString stringWithUTF8String:__DATE__];
-	UIAlertView *msgBox = [[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"about_title",@"Acerca de...")
-													 message:[NSString stringWithFormat:NSLocalizedString(@"about_message",
-															  @"WLAN Audit ©2011 Roberto Estrada\n\nEsta es una aplicacion pensada para auditar la seguridad de las claves de acceso de los puntos de acceso WLAN comprobando si pueden ser calculadas a traves de los datos publicos de la red.No me responsabilizo del uso que pueda derivarse de esta aplicacion\n\nBasado en el codigo de %@\n\nPuedes descargar el codigo desde:\n%@\n\nCompilado:%@"),
-															  refURL,sourceURL,buildDate]
-													delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
-	[msgBox show];
+    NSString *refURL = @"http://kz.ath.cx/wlan/codigo.txt";
+    NSString *sourceURL = @"https://github.com/RobertoEstrada/WLAN-Audit";
+    NSString *buildDate = [NSString stringWithUTF8String:__DATE__];
+    UIAlertView *msgBox = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"about_title", @"Acerca de...") message:[NSString stringWithFormat:NSLocalizedString(@"about_message",
+                                                                                                                                                    @"WLAN Audit ©2011 Roberto Estrada\n\nEsta es una aplicacion pensada para auditar la seguridad de las claves de acceso de los puntos de acceso WLAN comprobando si pueden ser calculadas a traves de los datos publicos de la red.No me responsabilizo del uso que pueda derivarse de esta aplicacion\n\nBasado en el codigo de %@\n\nPuedes descargar el codigo desde:\n%@\n\nCompilado:%@"),
+                                                                                                                                                    refURL, sourceURL, buildDate]
+                                                     delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+    [msgBox show];
 }
 
 #pragma mark -
 #pragma mark Data formatting methods
 
--(NSString*) formattedBSSIDfrom:(NSString*)bssid {
-	NSScanner *scanner = [NSScanner scannerWithString:bssid];
-	[scanner setCharactersToBeSkipped:[NSCharacterSet punctuationCharacterSet]];
-	NSMutableString *result = [NSMutableString stringWithCapacity:[bssid length]];
-	while (![scanner isAtEnd]) {
-		unsigned theValue;
-		if ([scanner scanHexInt:&theValue]) {
-			[result appendFormat:@":%02x",theValue];
-		} else {
-			[result appendString:@":??"];
-		}
-	}
-	return [result substringFromIndex:1];
+- (NSString *)formattedBSSIDfrom:(NSString *)bssid {
+    NSScanner *scanner = [NSScanner scannerWithString:bssid];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet punctuationCharacterSet]];
+    NSMutableString *result = [NSMutableString stringWithCapacity:[bssid length]];
+    while (![scanner isAtEnd]) {
+        unsigned theValue;
+        if ([scanner scanHexInt:&theValue]) {
+            [result appendFormat:@":%02x", theValue];
+        } else {
+            [result appendString:@":??"];
+        }
+    }
+    return [result substringFromIndex:1];
 }
 
 #pragma mark -
 #pragma mark Table view data source
 
--(void) dataSourceUpdated {
-	// Reloading data in the table view
-	self.wlanNetworks = [[[MSNetworksManager sharedNetworksManager] networks] allValues];
-	self.wlanBSSIDS = [[[MSNetworksManager sharedNetworksManager] networks] allKeys];
-	[self.tableView reloadData];
+- (void)dataSourceUpdated {
+    // Reloading data in the table view
+    self.wlanNetworks = [[[MSNetworksManager sharedNetworksManager] networks] allValues];
+    self.wlanBSSIDS = [[[MSNetworksManager sharedNetworksManager] networks] allKeys];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -125,23 +124,23 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
     static NSString *CellIdentifier = @"Cell";
-    
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];		
-		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    }	
-    
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
+
     // Getting Network Data	
-	NSString *wlanName  = [[wlanNetworks objectAtIndex:indexPath.row]objectForKey:@"SSID_STR"];
-	NSString *wlanBSSID = [[self formattedBSSIDfrom:[wlanBSSIDS objectAtIndex:indexPath.row]]uppercaseString];
-	
-	// Configuring cell to show WLAN Data
-	cell.textLabel.text = wlanName;
-	cell.detailTextLabel.text = wlanBSSID;
-    
+    NSString *wlanName = [[wlanNetworks objectAtIndex:indexPath.row] objectForKey:@"SSID_STR"];
+    NSString *wlanBSSID = [[self formattedBSSIDfrom:[wlanBSSIDS objectAtIndex:indexPath.row]] uppercaseString];
+
+    // Configuring cell to show WLAN Data
+    cell.textLabel.text = wlanName;
+    cell.detailTextLabel.text = wlanBSSID;
+
     return cell;
 }
 
@@ -160,7 +159,7 @@
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];    
+    [super didReceiveMemoryWarning];
     // Relinquish ownership any cached data, images, etc. that aren't in use.
 }
 
@@ -175,7 +174,7 @@
 - (void)dealloc {
     [super dealloc];
     [wlanNetworks release];
-	[wlanBSSIDS release];
+    [wlanBSSIDS release];
 }
 
 
