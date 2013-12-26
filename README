@@ -1,4 +1,0 @@
-To build the code simply rename the file Key.h.public that is inside the
-folder Libs/Admob to Key.h
-
-Once done, open the project with Xcode and build normally.

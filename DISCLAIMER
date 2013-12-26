@@ -1,6 +1,0 @@
-An application to audit the security of WLAN Access points.
-The application tries to guess the access point default password
-via a public known algorithm.
-
-This app is NOT MEANT to be used as a hacking utility, so I'm not responsible
-of the usage you make of it.

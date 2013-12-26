@@ -7,458 +7,532 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* WLANAuditAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		6212E12314098D0A0079AF6C /* NetworkDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212E12114098D0A0079AF6C /* NetworkDetailsController.m */; };
-		6212E12414098D0A0079AF6C /* NetworkDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6212E12214098D0A0079AF6C /* NetworkDetailsController.xib */; };
-		621CEF011343B95300F04E32 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 621CEEFF1343B95300F04E32 /* Localizable.strings */; };
-		623A5676138E691000D21FFB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5673138E691000D21FFB /* libGoogleAdMobAds.a */; };
-		623A5679138E708100D21FFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623A5678138E708100D21FFB /* SystemConfiguration.framework */; };
-		628459031301D312007CC17E /* WLANXXXXKeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 628459021301D312007CC17E /* WLANXXXXKeyCalculator.m */; };
-		6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309812FF293500BE76ED /* MSNetworksManager.m */; };
-		629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6291309E12FF2BBF00BE76ED /* NetworkListController.m */; };
-		629130A112FF2BBF00BE76ED /* NetworkListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6291309F12FF2BBF00BE76ED /* NetworkListController.xib */; };
-		629C7C79140853570046AB27 /* KeyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C7C77140853570046AB27 /* KeyListController.m */; };
-		629C7C7A140853570046AB27 /* KeyListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629C7C78140853570046AB27 /* KeyListController.xib */; };
-		62A0E5D4130306100094863D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D0130306100094863D /* Default.png */; };
-		62A0E5D5130306100094863D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D1130306100094863D /* Default@2x.png */; };
-		62A0E5D6130306100094863D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D2130306100094863D /* icon.png */; };
-		62A0E5D7130306100094863D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A0E5D3130306100094863D /* icon@2x.png */; };
-		62A0E63D13030B1D0094863D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E63C13030B1D0094863D /* AudioToolbox.framework */; };
-		62A0E64113030B390094863D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64013030B390094863D /* MediaPlayer.framework */; };
-		62A0E64513030B660094863D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0E64413030B660094863D /* MessageUI.framework */; };
-		62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0E67A13031A1D0094863D /* AdDelegate.m */; };
-		62C182DE1407072D00052601 /* WiFiXXXXXXKeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C182DD1407072D00052601 /* WiFiXXXXXXKeyCalculator.m */; };
+		626DB89E186A75390093A93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626DB89D186A75390093A93D /* Foundation.framework */; };
+		626DB8A0186A75390093A93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626DB89F186A75390093A93D /* CoreGraphics.framework */; };
+		626DB8A2186A75390093A93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626DB8A1186A75390093A93D /* UIKit.framework */; };
+		626DB8A8186A75390093A93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 626DB8A6186A75390093A93D /* InfoPlist.strings */; };
+		626DB8AA186A75390093A93D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DB8A9186A75390093A93D /* main.m */; };
+		626DB8AE186A75390093A93D /* WAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DB8AD186A75390093A93D /* WAAppDelegate.m */; };
+		626DB8B1186A75390093A93D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626DB8AF186A75390093A93D /* Main_iPhone.storyboard */; };
+		626DB8B4186A75390093A93D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626DB8B2186A75390093A93D /* Main_iPad.storyboard */; };
+		626DB8B7186A75390093A93D /* WAMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DB8B6186A75390093A93D /* WAMasterViewController.m */; };
+		626DB8BA186A75390093A93D /* WADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DB8B9186A75390093A93D /* WADetailViewController.m */; };
+		626DB8BC186A75390093A93D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626DB8BB186A75390093A93D /* Images.xcassets */; };
+		626DB8C3186A75390093A93D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626DB8C2186A75390093A93D /* XCTest.framework */; };
+		626DB8C4186A75390093A93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626DB89D186A75390093A93D /* Foundation.framework */; };
+		626DB8C5186A75390093A93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626DB8A1186A75390093A93D /* UIKit.framework */; };
+		626DB8CD186A75390093A93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 626DB8CB186A75390093A93D /* InfoPlist.strings */; };
+		626DB8CF186A75390093A93D /* WLANAuditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DB8CE186A75390093A93D /* WLANAuditTests.m */; };
+		62B1837B186C79C2007C0DCB /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B1837A186C79C2007C0DCB /* MSNetworksManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		626DB8C6186A75390093A93D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626DB892186A75380093A93D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 626DB899186A75390093A93D;
+			remoteInfo = wlanaudit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANAuditAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLANAuditAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* WLANAudit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLANAudit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* WLANAudit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANAudit_Prefix.pch; sourceTree = "<group>"; };
-		6212E12014098D0A0079AF6C /* NetworkDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDetailsController.h; sourceTree = "<group>"; };
-		6212E12114098D0A0079AF6C /* NetworkDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDetailsController.m; sourceTree = "<group>"; };
-		6212E12214098D0A0079AF6C /* NetworkDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NetworkDetailsController.xib; path = Classes/NetworkDetailsController.xib; sourceTree = "<group>"; };
-		621CEF001343B95300F04E32 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		621CEF0F1343BA7700F04E32 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		623A566B138E691000D21FFB /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		623A566C138E691000D21FFB /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		623A566D138E691000D21FFB /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		623A566E138E691000D21FFB /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		623A566F138E691000D21FFB /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		623A5670138E691000D21FFB /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		623A5671138E691000D21FFB /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
-		623A5672138E691000D21FFB /* Key.h.public */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Key.h.public; sourceTree = "<group>"; };
-		623A5673138E691000D21FFB /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		623A5674138E691000D21FFB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		623A5678138E708100D21FFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		628459011301D312007CC17E /* WLANXXXXKeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLANXXXXKeyCalculator.h; sourceTree = "<group>"; };
-		628459021301D312007CC17E /* WLANXXXXKeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLANXXXXKeyCalculator.m; sourceTree = "<group>"; };
-		6291309712FF293500BE76ED /* MSNetworksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNetworksManager.h; sourceTree = "<group>"; };
-		6291309812FF293500BE76ED /* MSNetworksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNetworksManager.m; sourceTree = "<group>"; };
-		6291309D12FF2BBF00BE76ED /* NetworkListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkListController.h; sourceTree = "<group>"; };
-		6291309E12FF2BBF00BE76ED /* NetworkListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkListController.m; sourceTree = "<group>"; };
-		6291309F12FF2BBF00BE76ED /* NetworkListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NetworkListController.xib; path = Classes/NetworkListController.xib; sourceTree = "<group>"; };
-		629C7C76140853570046AB27 /* KeyListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyListController.h; sourceTree = "<group>"; };
-		629C7C77140853570046AB27 /* KeyListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyListController.m; sourceTree = "<group>"; };
-		629C7C78140853570046AB27 /* KeyListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KeyListController.xib; path = Classes/KeyListController.xib; sourceTree = "<group>"; };
-		62A0E5D0130306100094863D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		62A0E5D1130306100094863D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		62A0E5D2130306100094863D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		62A0E5D3130306100094863D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		62A0E63C13030B1D0094863D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		62A0E64013030B390094863D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		62A0E64413030B660094863D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		62A0E64813030B700094863D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		62A0E67913031A1D0094863D /* AdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdDelegate.h; sourceTree = "<group>"; };
-		62A0E67A13031A1D0094863D /* AdDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdDelegate.m; sourceTree = "<group>"; };
-		62C182DB1407060E00052601 /* KeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCalculator.h; sourceTree = "<group>"; };
-		62C182DC1407072D00052601 /* WiFiXXXXXXKeyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiXXXXXXKeyCalculator.h; sourceTree = "<group>"; };
-		62C182DD1407072D00052601 /* WiFiXXXXXXKeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiXXXXXXKeyCalculator.m; sourceTree = "<group>"; };
-		62E3AD0015274A7100629984 /* WLANAudit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WLANAudit.entitlements; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* WLANAudit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WLANAudit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		626DB89A186A75390093A93D /* wlanaudit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wlanaudit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		626DB89D186A75390093A93D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		626DB89F186A75390093A93D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		626DB8A1186A75390093A93D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		626DB8A5186A75390093A93D /* WLANAudit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WLANAudit-Info.plist"; sourceTree = "<group>"; };
+		626DB8A7186A75390093A93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		626DB8A9186A75390093A93D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		626DB8AB186A75390093A93D /* WLANAudit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLANAudit-Prefix.pch"; sourceTree = "<group>"; };
+		626DB8AC186A75390093A93D /* WAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAAppDelegate.h; sourceTree = "<group>"; };
+		626DB8AD186A75390093A93D /* WAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAAppDelegate.m; sourceTree = "<group>"; };
+		626DB8B0186A75390093A93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		626DB8B3186A75390093A93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		626DB8B5186A75390093A93D /* WAMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WAMasterViewController.h; sourceTree = "<group>"; };
+		626DB8B6186A75390093A93D /* WAMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WAMasterViewController.m; sourceTree = "<group>"; };
+		626DB8B8186A75390093A93D /* WADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WADetailViewController.h; sourceTree = "<group>"; };
+		626DB8B9186A75390093A93D /* WADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WADetailViewController.m; sourceTree = "<group>"; };
+		626DB8BB186A75390093A93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		626DB8C1186A75390093A93D /* wlanauditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wlanauditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		626DB8C2186A75390093A93D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		626DB8CA186A75390093A93D /* WLANAuditTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WLANAuditTests-Info.plist"; sourceTree = "<group>"; };
+		626DB8CC186A75390093A93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		626DB8CE186A75390093A93D /* WLANAuditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLANAuditTests.m; sourceTree = "<group>"; };
+		62B18379186C79C2007C0DCB /* MSNetworksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNetworksManager.h; sourceTree = "<group>"; };
+		62B1837A186C79C2007C0DCB /* MSNetworksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNetworksManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+		626DB897186A75390093A93D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				623A5679138E708100D21FFB /* SystemConfiguration.framework in Frameworks */,
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				62A0E63D13030B1D0094863D /* AudioToolbox.framework in Frameworks */,
-				62A0E64113030B390094863D /* MediaPlayer.framework in Frameworks */,
-				62A0E64513030B660094863D /* MessageUI.framework in Frameworks */,
-				623A5676138E691000D21FFB /* libGoogleAdMobAds.a in Frameworks */,
+				626DB8A0186A75390093A93D /* CoreGraphics.framework in Frameworks */,
+				626DB8A2186A75390093A93D /* UIKit.framework in Frameworks */,
+				626DB89E186A75390093A93D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626DB8BE186A75390093A93D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626DB8C3186A75390093A93D /* XCTest.framework in Frameworks */,
+				626DB8C5186A75390093A93D /* UIKit.framework in Frameworks */,
+				626DB8C4186A75390093A93D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		626DB891186A75380093A93D = {
 			isa = PBXGroup;
 			children = (
-				62FC967D14098B6C0051BB2F /* Ads */,
-				62FC967C14098B510051BB2F /* Contrib */,
-				62FC967E14098B8D0051BB2F /* Controllers */,
-				62FC967B14098ACC0051BB2F /* Key Calculators */,
-				1D3623240D0F684500981E51 /* WLANAuditAppDelegate.h */,
-				1D3623250D0F684500981E51 /* WLANAuditAppDelegate.m */,
+				626DB8A3186A75390093A93D /* Sources */,
+				626DB8C8186A75390093A93D /* Tests */,
+				626DB89C186A75390093A93D /* Frameworks */,
+				626DB89B186A75390093A93D /* Products */,
 			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
-		19C28FACFE9D520D11CA2CBB /* Products */ = {
+		626DB89B186A75390093A93D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* WLANAudit.app */,
+				626DB89A186A75390093A93D /* wlanaudit.app */,
+				626DB8C1186A75390093A93D /* wlanauditTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+		626DB89C186A75390093A93D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62E3AD0015274A7100629984 /* WLANAudit.entitlements */,
-				62A0E60C130308D90094863D /* Libs */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
-			);
-			name = CustomTemplate;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* WLANAudit_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6212E12214098D0A0079AF6C /* NetworkDetailsController.xib */,
-				629C7C78140853570046AB27 /* KeyListController.xib */,
-				621CEEFF1343B95300F04E32 /* Localizable.strings */,
-				62A0E5D0130306100094863D /* Default.png */,
-				62A0E5D1130306100094863D /* Default@2x.png */,
-				62A0E5D2130306100094863D /* icon.png */,
-				62A0E5D3130306100094863D /* icon@2x.png */,
-				6291309F12FF2BBF00BE76ED /* NetworkListController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* WLANAudit-Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				623A5678138E708100D21FFB /* SystemConfiguration.framework */,
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
-				62A0E63C13030B1D0094863D /* AudioToolbox.framework */,
-				62A0E64013030B390094863D /* MediaPlayer.framework */,
-				62A0E64413030B660094863D /* MessageUI.framework */,
-				62A0E64813030B700094863D /* QuartzCore.framework */,
+				626DB89D186A75390093A93D /* Foundation.framework */,
+				626DB89F186A75390093A93D /* CoreGraphics.framework */,
+				626DB8A1186A75390093A93D /* UIKit.framework */,
+				626DB8C2186A75390093A93D /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		623A566A138E691000D21FFB /* GoogleAdMobAdsSDK */ = {
+		626DB8A3186A75390093A93D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				623A566B138E691000D21FFB /* GADBannerView.h */,
-				623A566C138E691000D21FFB /* GADBannerViewDelegate.h */,
-				623A566D138E691000D21FFB /* GADInterstitial.h */,
-				623A566E138E691000D21FFB /* GADInterstitialDelegate.h */,
-				623A566F138E691000D21FFB /* GADRequest.h */,
-				623A5670138E691000D21FFB /* GADRequestError.h */,
-				623A5671138E691000D21FFB /* Key.h */,
-				623A5672138E691000D21FFB /* Key.h.public */,
-				623A5673138E691000D21FFB /* libGoogleAdMobAds.a */,
-				623A5674138E691000D21FFB /* README.txt */,
+				62B18378186C79A7007C0DCB /* Utilities */,
+				62B18377186C75AF007C0DCB /* Storyboards */,
+				62B18376186C75A2007C0DCB /* Delegates */,
+				62B18375186C758A007C0DCB /* Controllers */,
+				626DB8BB186A75390093A93D /* Images.xcassets */,
+				626DB8A4186A75390093A93D /* Supporting Files */,
 			);
-			name = GoogleAdMobAdsSDK;
-			path = Libs/GoogleAdMobAdsSDK;
+			name = Sources;
+			path = wlanaudit;
 			sourceTree = "<group>";
 		};
-		62A0E60C130308D90094863D /* Libs */ = {
+		626DB8A4186A75390093A93D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				623A566A138E691000D21FFB /* GoogleAdMobAdsSDK */,
+				626DB8A5186A75390093A93D /* WLANAudit-Info.plist */,
+				626DB8A6186A75390093A93D /* InfoPlist.strings */,
+				626DB8A9186A75390093A93D /* main.m */,
+				626DB8AB186A75390093A93D /* WLANAudit-Prefix.pch */,
 			);
-			name = Libs;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		62FC967B14098ACC0051BB2F /* Key Calculators */ = {
+		626DB8C8186A75390093A93D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				628459011301D312007CC17E /* WLANXXXXKeyCalculator.h */,
-				62C182DB1407060E00052601 /* KeyCalculator.h */,
-				628459021301D312007CC17E /* WLANXXXXKeyCalculator.m */,
-				62C182DD1407072D00052601 /* WiFiXXXXXXKeyCalculator.m */,
-				62C182DC1407072D00052601 /* WiFiXXXXXXKeyCalculator.h */,
+				626DB8CE186A75390093A93D /* WLANAuditTests.m */,
+				626DB8C9186A75390093A93D /* Supporting Files */,
 			);
-			name = "Key Calculators";
+			name = Tests;
+			path = wlanauditTests;
 			sourceTree = "<group>";
 		};
-		62FC967C14098B510051BB2F /* Contrib */ = {
+		626DB8C9186A75390093A93D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6291309712FF293500BE76ED /* MSNetworksManager.h */,
-				6291309812FF293500BE76ED /* MSNetworksManager.m */,
+				626DB8CA186A75390093A93D /* WLANAuditTests-Info.plist */,
+				626DB8CB186A75390093A93D /* InfoPlist.strings */,
 			);
-			name = Contrib;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		62FC967D14098B6C0051BB2F /* Ads */ = {
+		62B18375186C758A007C0DCB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62A0E67A13031A1D0094863D /* AdDelegate.m */,
-				62A0E67913031A1D0094863D /* AdDelegate.h */,
-			);
-			name = Ads;
-			sourceTree = "<group>";
-		};
-		62FC967E14098B8D0051BB2F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				6291309D12FF2BBF00BE76ED /* NetworkListController.h */,
-				6291309E12FF2BBF00BE76ED /* NetworkListController.m */,
-				629C7C76140853570046AB27 /* KeyListController.h */,
-				629C7C77140853570046AB27 /* KeyListController.m */,
-				6212E12014098D0A0079AF6C /* NetworkDetailsController.h */,
-				6212E12114098D0A0079AF6C /* NetworkDetailsController.m */,
+				626DB8B5186A75390093A93D /* WAMasterViewController.h */,
+				626DB8B6186A75390093A93D /* WAMasterViewController.m */,
+				626DB8B8186A75390093A93D /* WADetailViewController.h */,
+				626DB8B9186A75390093A93D /* WADetailViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		62B18376186C75A2007C0DCB /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				626DB8AC186A75390093A93D /* WAAppDelegate.h */,
+				626DB8AD186A75390093A93D /* WAAppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		62B18377186C75AF007C0DCB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				626DB8AF186A75390093A93D /* Main_iPhone.storyboard */,
+				626DB8B2186A75390093A93D /* Main_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		62B18378186C79A7007C0DCB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				62B18379186C79C2007C0DCB /* MSNetworksManager.h */,
+				62B1837A186C79C2007C0DCB /* MSNetworksManager.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* WLANAudit */ = {
+		626DB899186A75390093A93D /* wlanaudit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WLANAudit" */;
+			buildConfigurationList = 626DB8D2186A75390093A93D /* Build configuration list for PBXNativeTarget "wlanaudit" */;
 			buildPhases = (
-				1D60588D0D05DD3D006BFB54 /* Resources */,
-				1D60588E0D05DD3D006BFB54 /* Sources */,
-				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				626DB896186A75390093A93D /* Sources */,
+				626DB897186A75390093A93D /* Frameworks */,
+				626DB898186A75390093A93D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WLANAudit;
-			productName = WLANKey;
-			productReference = 1D6058910D05DD3D006BFB54 /* WLANAudit.app */;
+			name = wlanaudit;
+			productName = wlanaudit;
+			productReference = 626DB89A186A75390093A93D /* wlanaudit.app */;
 			productType = "com.apple.product-type.application";
+		};
+		626DB8C0186A75390093A93D /* wlanauditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626DB8D5186A75390093A93D /* Build configuration list for PBXNativeTarget "wlanauditTests" */;
+			buildPhases = (
+				626DB8BD186A75390093A93D /* Sources */,
+				626DB8BE186A75390093A93D /* Frameworks */,
+				626DB8BF186A75390093A93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				626DB8C7186A75390093A93D /* PBXTargetDependency */,
+			);
+			name = wlanauditTests;
+			productName = wlanauditTests;
+			productReference = 626DB8C1186A75390093A93D /* wlanauditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		29B97313FDCFA39411CA2CEA /* Project object */ = {
+		626DB892186A75380093A93D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
-				ORGANIZATIONNAME = "Glass Pixel Software";
+				CLASSPREFIX = WA;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Roberto Estrada";
+				TargetAttributes = {
+					626DB8C0186A75390093A93D = {
+						TestTargetID = 626DB899186A75390093A93D;
+					};
+				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WLANAudit" */;
+			buildConfigurationList = 626DB895186A75380093A93D /* Build configuration list for PBXProject "WLANAudit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 1;
+			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
-				es,
+				Base,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			mainGroup = 626DB891186A75380093A93D;
+			productRefGroup = 626DB89B186A75390093A93D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* WLANAudit */,
+				626DB899186A75390093A93D /* wlanaudit */,
+				626DB8C0186A75390093A93D /* wlanauditTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+		626DB898186A75390093A93D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				629130A112FF2BBF00BE76ED /* NetworkListController.xib in Resources */,
-				62A0E5D4130306100094863D /* Default.png in Resources */,
-				62A0E5D5130306100094863D /* Default@2x.png in Resources */,
-				62A0E5D6130306100094863D /* icon.png in Resources */,
-				62A0E5D7130306100094863D /* icon@2x.png in Resources */,
-				621CEF011343B95300F04E32 /* Localizable.strings in Resources */,
-				629C7C7A140853570046AB27 /* KeyListController.xib in Resources */,
-				6212E12414098D0A0079AF6C /* NetworkDetailsController.xib in Resources */,
+				626DB8B4186A75390093A93D /* Main_iPad.storyboard in Resources */,
+				626DB8BC186A75390093A93D /* Images.xcassets in Resources */,
+				626DB8B1186A75390093A93D /* Main_iPhone.storyboard in Resources */,
+				626DB8A8186A75390093A93D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626DB8BF186A75390093A93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626DB8CD186A75390093A93D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+		626DB896186A75390093A93D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* WLANAuditAppDelegate.m in Sources */,
-				6291309912FF293500BE76ED /* MSNetworksManager.m in Sources */,
-				629130A012FF2BBF00BE76ED /* NetworkListController.m in Sources */,
-				628459031301D312007CC17E /* WLANXXXXKeyCalculator.m in Sources */,
-				62A0E67B13031A1D0094863D /* AdDelegate.m in Sources */,
-				62C182DE1407072D00052601 /* WiFiXXXXXXKeyCalculator.m in Sources */,
-				629C7C79140853570046AB27 /* KeyListController.m in Sources */,
-				6212E12314098D0A0079AF6C /* NetworkDetailsController.m in Sources */,
+				626DB8AE186A75390093A93D /* WAAppDelegate.m in Sources */,
+				626DB8BA186A75390093A93D /* WADetailViewController.m in Sources */,
+				62B1837B186C79C2007C0DCB /* MSNetworksManager.m in Sources */,
+				626DB8AA186A75390093A93D /* main.m in Sources */,
+				626DB8B7186A75390093A93D /* WAMasterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626DB8BD186A75390093A93D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626DB8CF186A75390093A93D /* WLANAuditTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		626DB8C7186A75390093A93D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 626DB899186A75390093A93D /* wlanaudit */;
+			targetProxy = 626DB8C6186A75390093A93D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		621CEEFF1343B95300F04E32 /* Localizable.strings */ = {
+		626DB8A6186A75390093A93D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				621CEF001343B95300F04E32 /* en */,
-				621CEF0F1343BA7700F04E32 /* es */,
+				626DB8A7186A75390093A93D /* en */,
 			);
-			name = Localizable.strings;
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		626DB8AF186A75390093A93D /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				626DB8B0186A75390093A93D /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		626DB8B2186A75390093A93D /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				626DB8B3186A75390093A93D /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		626DB8CB186A75390093A93D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				626DB8CC186A75390093A93D /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1D6058940D05DD3E006BFB54 /* Debug */ = {
+		626DB8D0186A75390093A93D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WLANAudit_Prefix.pch;
-				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "WLANAudit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
-				LIBRARY_SEARCH_PATHS = (
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"\"$(SRCROOT)/Libs/GoogleAdMobAdsSDK\"",
 				);
-				PRODUCT_NAME = WLANAudit;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1D6058950D05DD3E006BFB54 /* Release */ = {
+		626DB8D1186A75390093A93D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WLANAudit_Prefix.pch;
-				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "WLANAudit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Libs/GoogleAdMobAdsSDK\"",
-				);
-				PRODUCT_NAME = WLANAudit;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C01FCF4F08A954540054247B /* Debug */ = {
+		626DB8D3186A75390093A93D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = WLANAudit.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				OTHER_CODE_SIGN_FLAGS = "";
-				PRODUCT_NAME = WLANAudit;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WLANAudit/WLANAudit-Prefix.pch";
+				INFOPLIST_FILE = "WLANAudit/WLANAudit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		C01FCF5008A954540054247B /* Release */ = {
+		626DB8D4186A75390093A93D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = WLANAudit;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WLANAudit/WLANAudit-Prefix.pch";
+				INFOPLIST_FILE = "WLANAudit/WLANAudit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		626DB8D6186A75390093A93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wlanaudit.app/wlanaudit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wlanaudit/wlanaudit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "wlanauditTests/wlanauditTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		626DB8D7186A75390093A93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wlanaudit.app/wlanaudit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wlanaudit/wlanaudit-Prefix.pch";
+				INFOPLIST_FILE = "wlanauditTests/wlanauditTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "WLANAudit" */ = {
+		626DB895186A75380093A93D /* Build configuration list for PBXProject "WLANAudit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug */,
-				1D6058950D05DD3E006BFB54 /* Release */,
+				626DB8D0186A75390093A93D /* Debug */,
+				626DB8D1186A75390093A93D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WLANAudit" */ = {
+		626DB8D2186A75390093A93D /* Build configuration list for PBXNativeTarget "wlanaudit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug */,
-				C01FCF5008A954540054247B /* Release */,
+				626DB8D3186A75390093A93D /* Debug */,
+				626DB8D4186A75390093A93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		626DB8D5186A75390093A93D /* Build configuration list for PBXNativeTarget "wlanauditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626DB8D6186A75390093A93D /* Debug */,
+				626DB8D7186A75390093A93D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+	rootObject = 626DB892186A75380093A93D /* Project object */;
 }
