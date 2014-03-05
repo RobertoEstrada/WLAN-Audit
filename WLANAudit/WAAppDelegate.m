@@ -18,6 +18,8 @@
 
 #import "WAAppDelegate.h"
 
+@class WASplitViewController;
+
 @implementation WAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -25,8 +27,8 @@
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
+        //UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+        splitViewController.delegate = (WASplitViewController<UISplitViewControllerDelegate>*)splitViewController;
     }
     return YES;
 }

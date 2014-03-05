@@ -1,0 +1,20 @@
+PODS:
+  - libKeygen (1.0)
+  - MagicalRecord (2.2)
+  - QuickDialog (0.9.1)
+
+DEPENDENCIES:
+  - libKeygen (from `../libKeygen`)
+  - MagicalRecord
+  - QuickDialog (~> 0.9.1)
+
+EXTERNAL SOURCES:
+  libKeygen:
+    :path: ../libKeygen
+
+SPEC CHECKSUMS:
+  libKeygen: d6cdbb690198c3ea2b51b81277e837c95246a7d7
+  MagicalRecord: b1fc46c99a9749fe7fe7e6f43a89b62ef5201933
+  QuickDialog: fa9f2641b1c2028667e115add0005530c77193a3
+
+COCOAPODS: 0.28.0
