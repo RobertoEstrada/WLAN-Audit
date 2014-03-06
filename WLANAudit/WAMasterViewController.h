@@ -1,7 +1,7 @@
 /*
  * WAMasterViewController.h
  *
- * Copyright 2013 Roberto Estrada
+ * Copyright 2014 Roberto Estrada
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
@@ -18,10 +18,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class WADetailViewController;
+@class WANetworkDetailsViewController;
 
 @interface WAMasterViewController : UITableViewController
 
-@property (strong, nonatomic) WADetailViewController *detailViewController;
+@property (strong, nonatomic) WANetworkDetailsViewController *detailViewController;
 
 @end

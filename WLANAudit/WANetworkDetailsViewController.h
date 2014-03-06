@@ -1,7 +1,7 @@
 /*
  * WANetworkDetailsViewController.h
  *
- * Copyright 2013 Roberto Estrada
+ * Copyright 2014 Roberto Estrada
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
@@ -17,6 +17,12 @@
 
 #import "QuickDialogController.h"
 
-@interface WANetworkDetailsViewController : QuickDialogController
+@class WANetworkData;
+
+@interface WANetworkDetailsViewController : QuickDialogController<UISplitViewControllerDelegate>
+
+@property (nonatomic, strong) WANetworkData *network;
+
+- (IBAction)saveNetworkAsFavourite:(id)sender;
 
 @end

@@ -1,5 +1,5 @@
 /*
- * WANetworkData.h
+ * WASimulatorNetworksManager.h
  *
  * Copyright 2014 Roberto Estrada
  *
@@ -13,21 +13,13 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import <Foundation/Foundation.h>
+#import "MSNetworksManager.h"
 
-@interface WANetworkData : NSObject
+@interface WASimulatorNetworksManager : MSNetworksManager
 
-@property(nonatomic,strong) NSString* essid;
-@property(nonatomic,strong) NSString* bssid;
-
-@property(nonatomic,assign) NSInteger channel;
-@property(nonatomic,strong) NSString* mode;
-@property(nonatomic,strong) NSString* rssi;
-@property(nonatomic,assign) BOOL wep;
-@property(nonatomic,assign) BOOL wpa;
-
--(id)initWithDictionary:(NSDictionary*) values;
++ (WASimulatorNetworksManager *)sharedNetworksManager;
 
 @end

@@ -28,6 +28,7 @@
 		626DB8CD186A75390093A93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 626DB8CB186A75390093A93D /* InfoPlist.strings */; };
 		626DB8CF186A75390093A93D /* WLANAuditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DB8CE186A75390093A93D /* WLANAuditTests.m */; };
 		628834BC1870C8BE00550051 /* WANetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 628834BB1870C8BE00550051 /* WANetworkData.m */; };
+		62974CA818C7E7C5003238DE /* WASimulatorNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62974CA718C7E7C5003238DE /* WASimulatorNetworksManager.m */; };
 		62B1837B186C79C2007C0DCB /* MSNetworksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B1837A186C79C2007C0DCB /* MSNetworksManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		62FA2F241870B40200225717 /* WANetworkDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FA2F231870B40200225717 /* WANetworkDetailsViewController.m */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		626DB8CE186A75390093A93D /* WLANAuditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLANAuditTests.m; sourceTree = "<group>"; };
 		628834BA1870C8BE00550051 /* WANetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WANetworkData.h; path = WLANAudit/WANetworkData.h; sourceTree = SOURCE_ROOT; };
 		628834BB1870C8BE00550051 /* WANetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WANetworkData.m; path = WLANAudit/WANetworkData.m; sourceTree = SOURCE_ROOT; };
+		62974CA618C7E7C5003238DE /* WASimulatorNetworksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WASimulatorNetworksManager.h; path = WLANAudit/WASimulatorNetworksManager.h; sourceTree = SOURCE_ROOT; };
+		62974CA718C7E7C5003238DE /* WASimulatorNetworksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WASimulatorNetworksManager.m; path = WLANAudit/WASimulatorNetworksManager.m; sourceTree = SOURCE_ROOT; };
 		62B18379186C79C2007C0DCB /* MSNetworksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNetworksManager.h; sourceTree = "<group>"; };
 		62B1837A186C79C2007C0DCB /* MSNetworksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNetworksManager.m; sourceTree = "<group>"; };
 		62FA2F221870B40200225717 /* WANetworkDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WANetworkDetailsViewController.h; path = WLANAudit/WANetworkDetailsViewController.h; sourceTree = SOURCE_ROOT; };
@@ -151,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				628834B91870C7F100550051 /* Models */,
-				62B18378186C79A7007C0DCB /* Utilities */,
+				62B18378186C79A7007C0DCB /* Networks */,
 				62B18377186C75AF007C0DCB /* Storyboards */,
 				62B18376186C75A2007C0DCB /* Delegates */,
 				62B18375186C758A007C0DCB /* Controllers */,
@@ -234,13 +237,15 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		62B18378186C79A7007C0DCB /* Utilities */ = {
+		62B18378186C79A7007C0DCB /* Networks */ = {
 			isa = PBXGroup;
 			children = (
 				62B18379186C79C2007C0DCB /* MSNetworksManager.h */,
 				62B1837A186C79C2007C0DCB /* MSNetworksManager.m */,
+				62974CA618C7E7C5003238DE /* WASimulatorNetworksManager.h */,
+				62974CA718C7E7C5003238DE /* WASimulatorNetworksManager.m */,
 			);
-			name = Utilities;
+			name = Networks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62974CA818C7E7C5003238DE /* WASimulatorNetworksManager.m in Sources */,
 				62FA2F241870B40200225717 /* WANetworkDetailsViewController.m in Sources */,
 				626DB8AE186A75390093A93D /* WAAppDelegate.m in Sources */,
 				626DB8BA186A75390093A93D /* WADetailViewController.m in Sources */,
