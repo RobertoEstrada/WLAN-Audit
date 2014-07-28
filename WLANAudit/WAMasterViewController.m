@@ -29,6 +29,7 @@
 @interface WAMasterViewController ()
 
 @property (nonatomic, strong) NSMutableArray *scannedNetworksList;
+@property (nonatomic, strong) RLMArray *storedNetworksList;
 @property (nonatomic, strong) MSNetworksManager *networksManager;
 
 @end
@@ -36,6 +37,7 @@
 @implementation WAMasterViewController
 
 @synthesize scannedNetworksList;
+@synthesize storedNetworksList;
 @synthesize networksManager;
 
 - (void)viewDidLoad
@@ -50,6 +52,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self scanForNetworks];
+    storedNetworksList = [WANetworkData allObjects];
 }
 
 #pragma mark - Network scanning
@@ -89,14 +92,30 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return scannedNetworksList.count;
+    switch (self.viewModeSelector.selectedSegmentIndex) {
+        case SCAN_NETWORKS_SEGMENT:
+            return scannedNetworksList.count;
+        case STORED_NETWORKS_SEGMENT:
+            return storedNetworksList.count;
+        default:
+            return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    WANetworkData *network = scannedNetworksList[indexPath.row];
+    
+    WANetworkData *network;
+    switch (self.viewModeSelector.selectedSegmentIndex) {
+        case SCAN_NETWORKS_SEGMENT:
+            network = scannedNetworksList[indexPath.row];
+            break;
+        case STORED_NETWORKS_SEGMENT:
+            network = storedNetworksList[indexPath.row];
+            break;
+    }
+    
     cell.textLabel.text = network.essid;
     cell.detailTextLabel.text = network.bssid;
     
@@ -106,7 +125,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        WANetworkData *network = scannedNetworksList[indexPath.row];
+        WANetworkData *network;
+        switch (self.viewModeSelector.selectedSegmentIndex) {
+            case SCAN_NETWORKS_SEGMENT:
+                network = scannedNetworksList[indexPath.row];
+                break;
+            case STORED_NETWORKS_SEGMENT:
+                network = storedNetworksList[indexPath.row];
+                break;
+        }
         self.detailViewController.network = network;
     }
 }
@@ -115,9 +142,39 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        WANetworkData *network = scannedNetworksList[indexPath.row];
+        
+        WANetworkData *network;
+        switch (self.viewModeSelector.selectedSegmentIndex) {
+            case SCAN_NETWORKS_SEGMENT:
+                network = scannedNetworksList[indexPath.row];
+                break;
+            case STORED_NETWORKS_SEGMENT:
+                network = storedNetworksList[indexPath.row];
+                break;
+        }
+        
         [[segue destinationViewController] setNetwork:network];
     }
+}
+
+#pragma mark - Actions
+
+- (IBAction)viewModeSelected
+{
+    [self.tableView reloadData];
+}
+
+- (IBAction)refreshNetworks
+{
+    switch (self.viewModeSelector.selectedSegmentIndex) {
+    case SCAN_NETWORKS_SEGMENT:
+        [self scanForNetworks];
+        break;
+    case STORED_NETWORKS_SEGMENT:
+        storedNetworksList = [WANetworkData allObjects];
+        break;
+    }
+    [self.refreshControl endRefreshing];
 }
 
 @end

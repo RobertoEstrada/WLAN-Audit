@@ -44,6 +44,9 @@
                                         <segment title="Scan Networks"/>
                                         <segment title="Stored Networks"/>
                                     </segments>
+                                    <connections>
+                                        <action selector="viewModeSelected" destination="pGg-6v-bdr" eventType="valueChanged" id="oCy-Dx-J5q"/>
+                                    </connections>
                                 </segmentedControl>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -98,7 +101,13 @@
                     <navigationItem key="navigationItem" title="WLANAudit" id="tQt-TN-PWz"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Vgx-Mp-LNi">
                         <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshNetworks" destination="pGg-6v-bdr" eventType="valueChanged" id="57g-Pk-nmM"/>
+                        </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="viewModeSelector" destination="B6K-cX-5Jh" id="vQu-9Y-qNk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>

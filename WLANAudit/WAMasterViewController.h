@@ -18,10 +18,16 @@
 
 #import <UIKit/UIKit.h>
 
+#define SCAN_NETWORKS_SEGMENT 0
+#define STORED_NETWORKS_SEGMENT 1
+
 @class WANetworkDetailsViewController;
 
 @interface WAMasterViewController : UITableViewController
 
 @property (strong, nonatomic) WANetworkDetailsViewController *detailViewController;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *viewModeSelector;
+- (IBAction)viewModeSelected;
+- (IBAction)refreshNetworks;
 
 @end

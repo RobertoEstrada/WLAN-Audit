@@ -15,18 +15,18 @@
  * You should have received a copy of the GNU General Public License
  */
 
-#import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
-@interface WANetworkData : NSObject
+@interface WANetworkData : RLMObject
 
-@property(nonatomic,strong) NSString* essid;
-@property(nonatomic,strong) NSString* bssid;
+@property NSString* essid;
+@property NSString* bssid;
 
-@property(nonatomic,assign) NSInteger channel;
-@property(nonatomic,strong) NSString* mode;
-@property(nonatomic,strong) NSString* rssi;
-@property(nonatomic,assign) BOOL wep;
-@property(nonatomic,assign) BOOL wpa;
+@property NSInteger channel;
+@property NSString* mode;
+@property NSString* rssi;
+@property BOOL wep;
+@property BOOL wpa;
 
 -(id)initWithDictionary:(NSDictionary*) values;
 

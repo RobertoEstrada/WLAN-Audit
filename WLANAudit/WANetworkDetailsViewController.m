@@ -49,6 +49,13 @@
 
 - (IBAction)saveNetworkAsFavourite:(id)sender
 {
+    // Gets the default persistence realm
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    
+    // Persists this network object to the realm
+    [defaultRealm beginWriteTransaction];
+    [defaultRealm addObject:network];
+    [defaultRealm commitWriteTransaction];
     
 }
 
