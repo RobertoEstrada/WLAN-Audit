@@ -5,8 +5,8 @@ xcodeproj 'WLANAudit.xcodeproj'
 
 target :wlanaudit do
   xcodeproj 'WLANAudit.xcodeproj'
-  pod 'MagicalRecord'
-  pod 'QuickDialog', '~> 0.9.1'
+  pod 'Realm'
+  pod 'QuickDialog', '~> 1.0'
   pod 'libKeygen', :path => "../libKeygen"
   
   post_install do | installer |

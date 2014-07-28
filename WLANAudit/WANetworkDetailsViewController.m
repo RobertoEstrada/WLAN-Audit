@@ -37,6 +37,14 @@
     [self configureView];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (network != nil) {
+        self.navigationItem.title = network.essid;
+    }
+}
+
 #pragma mark - Actions
 
 - (IBAction)saveNetworkAsFavourite:(id)sender
@@ -50,7 +58,6 @@
 {
     if (selectedNetwork != nil) {
         network = selectedNetwork;
-        self.navigationItem.title = selectedNetwork.essid;
         [self configureView];
     }
 }
