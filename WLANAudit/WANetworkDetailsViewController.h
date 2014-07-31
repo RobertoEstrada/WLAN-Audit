@@ -15,11 +15,12 @@
  * You should have received a copy of the GNU General Public License
  */
 
+#import <UIScrollView+EmptyDataSet.h>
 #import "QuickDialogController.h"
 
 @class WANetworkData;
 
-@interface WANetworkDetailsViewController : QuickDialogController<UISplitViewControllerDelegate>
+@interface WANetworkDetailsViewController : QuickDialogController<UISplitViewControllerDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (nonatomic, strong) WANetworkData *network;
 

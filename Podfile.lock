@@ -1,4 +1,5 @@
 PODS:
+  - DZNEmptyDataSet (1.3.3)
   - libKeygen (1.0)
   - QuickDialog (1.0):
     - QuickDialog/Core
@@ -6,6 +7,7 @@ PODS:
   - Realm (0.81.0)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - libKeygen (from `../libKeygen`)
   - QuickDialog (~> 1.0)
   - Realm
@@ -15,7 +17,8 @@ EXTERNAL SOURCES:
     :path: ../libKeygen
 
 SPEC CHECKSUMS:
-  libKeygen: d6cdbb690198c3ea2b51b81277e837c95246a7d7
+  DZNEmptyDataSet: aa20600aff620af3d78edbff4bc47282972e815f
+  libKeygen: 0847df8f1c06678b846447b521b720b01a544874
   QuickDialog: 1f1df7b87d608bcbb3919f4ec809bd7d7ae50101
   Realm: 18d96d4c565c5fd7d12d17ef45ee78551e8ee365
 

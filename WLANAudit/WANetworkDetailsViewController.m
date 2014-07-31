@@ -21,6 +21,7 @@
 @interface WANetworkDetailsViewController ()
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (strong, nonatomic) NSArray *rightBarButtonItems;
 
 @end
 
@@ -35,6 +36,14 @@
     [super setRoot:[self setupDialog]];
     [super loadView];
     [self configureView];
+    
+    self.quickDialogTableView.emptyDataSetSource = self;
+    self.quickDialogTableView.emptyDataSetDelegate = self;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self.rightBarButtonItems = self.navigationItem.rightBarButtonItems;
+        self.parentViewController.navigationItem.rightBarButtonItems = nil;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -42,6 +51,7 @@
     [super viewDidAppear:animated];
     if (network != nil) {
         self.navigationItem.title = network.essid;
+        [self.navigationItem setRightBarButtonItems:self.rightBarButtonItems animated:YES];
     }
 }
 
@@ -65,6 +75,9 @@
 {
     if (selectedNetwork != nil) {
         network = selectedNetwork;
+        if (self.root.sections.count == 0) {
+            [super setRoot:[self setupDialog]];
+        }
         [self configureView];
     }
 }
@@ -78,41 +91,43 @@
     dialogRoot.grouped = YES;
     dialogRoot.controllerName = NSStringFromClass([WANetworkDetailsViewController class]);
     
-    QSection *ssidSection = [[QSection alloc] initWithTitle:NSLocalizedString(@"NET_SSID_SECTION_LABEL", @"Network name")];
-    QLabelElement *essidLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_ESSID_LABEL", @"ESSID") Value:nil];
-    essidLabel.key = @"ESSID_LABEL";
-    
-    QLabelElement *bssidLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_BSSID_LABEL", @"BSSID") Value:nil];
-    bssidLabel.key = @"BSSID_LABEL";
-    
-    [ssidSection addElement: essidLabel];
-    [ssidSection addElement:bssidLabel];
-    
-    QSection *detailsSection = [[QSection alloc] initWithTitle:NSLocalizedString(@"NET_DETAILS_SECTION_LABEL", @"Details")];
-    
-    QLabelElement *channelLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_CHANNEL_LABEL", @"Channel") Value:nil];
-    channelLabel.key = @"CHANNEL_LABEL";
-    
-    QLabelElement *modeLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_MODE_LABEL", @"Mode") Value:nil];
-    modeLabel.key = @"MODE_LABEL";
-    
-    QLabelElement *rssiLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_RSSI_LABEL", @"RSSI") Value:nil];
-    rssiLabel.key = @"RSSI_LABEL";
-    
-    QLabelElement *wepLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_WEP_LABEL", @"WEP") Value:nil];
-    wepLabel.key = @"WEP_LABEL";
-    
-    QLabelElement *wpaLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_WPA_LABEL", @"WPA") Value:nil];
-    wpaLabel.key = @"WPA_LABEL";
-    
-    [detailsSection addElement:channelLabel];
-    [detailsSection addElement:modeLabel];
-    [detailsSection addElement:rssiLabel];
-    [detailsSection addElement:wepLabel];
-    [detailsSection addElement:wpaLabel];
-    
-    [dialogRoot addSection:ssidSection];
-    [dialogRoot addSection:detailsSection];
+    if (network != nil) {
+        QSection *ssidSection = [[QSection alloc] initWithTitle:NSLocalizedString(@"NET_SSID_SECTION_LABEL", @"Network name")];
+        QLabelElement *essidLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_ESSID_LABEL", @"ESSID") Value:nil];
+        essidLabel.key = @"ESSID_LABEL";
+        
+        QLabelElement *bssidLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_BSSID_LABEL", @"BSSID") Value:nil];
+        bssidLabel.key = @"BSSID_LABEL";
+        
+        [ssidSection addElement: essidLabel];
+        [ssidSection addElement:bssidLabel];
+        
+        QSection *detailsSection = [[QSection alloc] initWithTitle:NSLocalizedString(@"NET_DETAILS_SECTION_LABEL", @"Details")];
+        
+        QLabelElement *channelLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_CHANNEL_LABEL", @"Channel") Value:nil];
+        channelLabel.key = @"CHANNEL_LABEL";
+        
+        QLabelElement *modeLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_MODE_LABEL", @"Mode") Value:nil];
+        modeLabel.key = @"MODE_LABEL";
+        
+        QLabelElement *rssiLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_RSSI_LABEL", @"RSSI") Value:nil];
+        rssiLabel.key = @"RSSI_LABEL";
+        
+        QLabelElement *wepLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_WEP_LABEL", @"WEP") Value:nil];
+        wepLabel.key = @"WEP_LABEL";
+        
+        QLabelElement *wpaLabel = [[QLabelElement alloc] initWithTitle:NSLocalizedString(@"NET_WPA_LABEL", @"WPA") Value:nil];
+        wpaLabel.key = @"WPA_LABEL";
+        
+        [detailsSection addElement:channelLabel];
+        [detailsSection addElement:modeLabel];
+        [detailsSection addElement:rssiLabel];
+        [detailsSection addElement:wepLabel];
+        [detailsSection addElement:wpaLabel];
+        
+        [dialogRoot addSection:ssidSection];
+        [dialogRoot addSection:detailsSection];
+    }
     
     return dialogRoot;
 }
@@ -127,6 +142,11 @@
         ((QLabelElement*)[self.root elementWithKey:@"RSSI_LABEL"]).value = network.rssi;
         ((QLabelElement*)[self.root elementWithKey:@"WEP_LABEL"]).value = network.wep ? NSLocalizedString(@"MSG_YES", @"YES"):NSLocalizedString(@"MSG_NO", @"NO");
         ((QLabelElement*)[self.root elementWithKey:@"WPA_LABEL"]).value = network.wpa ? NSLocalizedString(@"MSG_YES", @"YES"):NSLocalizedString(@"MSG_NO", @"NO");
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            self.parentViewController.navigationItem.title = network.essid;
+            [self.parentViewController.navigationItem setRightBarButtonItems:self.rightBarButtonItems animated:YES];
+        }
         
         [self.quickDialogTableView reloadData];
     }
@@ -146,6 +166,38 @@
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+#pragma mark - Empty dataset
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
+    
+    return [UIImage imageNamed:@"Empty Detail View"];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = NSLocalizedString(@"EMPTY_DETAILS_TITLE", @"Title for empty details view");
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = NSLocalizedString(@"EMPTY_DETAILS_TEXT", @"Text for empty details view");
+    
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:14.0],
+                                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
+                                 NSParagraphStyleAttributeName: paragraph};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 
 @end

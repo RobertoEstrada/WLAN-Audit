@@ -44,7 +44,8 @@
 {
     [super viewDidLoad];
     self.scannedNetworksList = [NSMutableArray array];
-    self.detailViewController = (WANetworkDetailsViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    /*self.detailViewController = (WANetworkDetailsViewController *)[(UITabBarController*)[[self.splitViewController.viewControllers lastObject] topViewController] selectedViewController];*/
+    self.detailViewController = [[self.splitViewController.viewControllers lastObject]topViewController].childViewControllers.firstObject;
     // Notification of scan completion
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scanFinished) name:@"stoppedScanning" object:nil];
 }

@@ -6,6 +6,7 @@ xcodeproj 'WLANAudit.xcodeproj'
 target :wlanaudit do
   xcodeproj 'WLANAudit.xcodeproj'
   pod 'Realm'
+  pod 'DZNEmptyDataSet'
   pod 'QuickDialog', '~> 1.0'
   pod 'libKeygen', :path => "../libKeygen"
   
