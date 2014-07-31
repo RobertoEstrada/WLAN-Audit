@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-476" y="-1640"/>
         </scene>
-        <!--Network Details View Controller - Item-->
+        <!--Network Details View Controller - Network details-->
         <scene sceneID="pJw-da-qXc">
             <objects>
                 <viewController id="RNI-9K-gLe" customClass="WANetworkDetailsViewController" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ajL-cr-ngc"/>
+                    <tabBarItem key="tabBarItem" title="Network details" image="Details Tab Icon" id="ajL-cr-ngc"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="o4C-GH-8ib">
                         <barButtonItem key="rightBarButtonItem" image="Favourite Action Icon" id="MIu-pF-2cR">
@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="448" y="-2191"/>
         </scene>
-        <!--View Controller - Item-->
+        <!--View Controller - Hotspot map-->
         <scene sceneID="P8S-yh-CHd">
             <objects>
                 <viewController id="8cU-hK-mBe" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="8va-vB-hOb"/>
+                    <tabBarItem key="tabBarItem" title="Hotspot map" image="Show Map Action Icon" id="8va-vB-hOb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzl-8K-t3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,7 +232,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Details Tab Icon" width="20" height="20"/>
         <image name="Favourite Action Icon" width="20" height="20"/>
+        <image name="Show Map Action Icon" width="20" height="20"/>
         <image name="Wifi List Icon" width="40" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
