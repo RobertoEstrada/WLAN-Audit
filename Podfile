@@ -5,14 +5,13 @@ xcodeproj 'WLANAudit.xcodeproj'
 
 target :wlanaudit do
   xcodeproj 'WLANAudit.xcodeproj'
-  pod 'Realm'
+  pod 'Realm', '~> 0.87'
   pod 'DZNEmptyDataSet'
   pod 'QuickDialog', '~> 1.0'
-  pod 'libKeygen', :path => "../libKeygen"
+  pod 'libKeygen', :git => "https://github.com/RobertoEstrada/libKeygen.git", :tag => "1.0.0"
   
   post_install do | installer |
     require 'fileutils'
     FileUtils.cp_r('Pods/Pods-WLANAudit-acknowledgements.plist', 'WLANAudit/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
-    FileUtils.cp_r('../libKeygen', 'Pods/libKeygen')
   end
 end

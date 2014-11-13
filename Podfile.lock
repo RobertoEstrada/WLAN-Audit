@@ -4,22 +4,25 @@ PODS:
   - QuickDialog (1.0):
     - QuickDialog/Core
   - QuickDialog/Core (1.0)
-  - Realm (0.81.0)
+  - Realm (0.87.4):
+    - Realm/Headers
+  - Realm/Headers (0.87.4)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
-  - libKeygen (from `../libKeygen`)
+  - libKeygen (from `https://github.com/RobertoEstrada/libKeygen.git`, tag `1.0.0`)
   - QuickDialog (~> 1.0)
-  - Realm
+  - Realm (~> 0.87)
 
 EXTERNAL SOURCES:
   libKeygen:
-    :path: ../libKeygen
+    :git: https://github.com/RobertoEstrada/libKeygen.git
+    :tag: 1.0.0
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: aa20600aff620af3d78edbff4bc47282972e815f
-  libKeygen: b962df03f088af9864bcb1671060d6478c4850e4
+  libKeygen: 2efa2c64ca406c7b8f2c25e74abc6c6d07aea025
   QuickDialog: 1f1df7b87d608bcbb3919f4ec809bd7d7ae50101
-  Realm: 18d96d4c565c5fd7d12d17ef45ee78551e8ee365
+  Realm: 17d0d9c94b38d15223fa3e806ead0e0562765e46
 
 COCOAPODS: 0.33.1
